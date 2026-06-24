@@ -1,0 +1,3229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Team Infosoft – Web Designing & Development</title>
+    <link rel="icon" type="image/png" href="images/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="index.css?v=2.7" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ======= LOADER ======= -->
+    <div id="loader">
+      <div class="lb"></div>
+      <div class="lb"></div>
+      <div class="lb"></div>
+      <div class="lb"></div>
+      <div class="lb"></div>
+      <div class="lb"></div>
+    </div>
+    <div class="loader-brand" id="loader-brand">
+      <img
+        src="images/logo.png"
+        alt="Team Infosoft Logo"
+        id="loader-logo"
+        style="height: 70px; opacity: 0; transform: translateY(20px)"
+      />
+      <div class="loader-bar-wrap" id="loader-bar-wrap">
+        <div class="loader-bar" id="loader-bar"></div>
+      </div>
+      <div class="loader-tagline" id="loader-tagline">
+        Crafting Digital Experiences
+      </div>
+    </div>
+
+    <!-- SCROLL PROGRESS -->
+    <div id="sp"></div>
+
+    <!-- TOAST -->
+    <div id="toast" class="toast"></div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="on-home">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo" data-page="home">
+          <img src="images/logo.png" alt="Team Infosoft" style="height: 45px" />
+        </a>
+        <div class="nav-links">
+          <a href="#" class="nl active" data-page="home"
+            >Home
+            <div class="nl-indicator"></div
+          ></a>
+          <a href="#" class="nl" data-page="about"
+            >About Us
+            <div class="nl-indicator"></div
+          ></a>
+          <a href="#" class="nl" data-page="services"
+            >Services
+            <div class="nl-indicator"></div
+          ></a>
+          <a href="#" class="nl" data-page="designs"
+            >Designs
+            <div class="nl-indicator"></div
+          ></a>
+          <a href="#" class="nl" data-page="packages"
+            >Packages
+            <div class="nl-indicator"></div
+          ></a>
+          <a href="#" class="nl" data-page="contact"
+            >Contact
+            <div class="nl-indicator"></div
+          ></a>
+          <!-- Removed Terms and Privacy from navbar -->
+          <a href="#" class="nav-cta" data-page="contact">Get Started</a>
+        </div>
+        <button class="ham" id="ham" aria-label="Menu">
+          <svg
+            id="hico-o"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+          <svg
+            id="hico-c"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            style="display: none"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+      <div class="mob-menu" id="mob-menu">
+        <div class="mob-inner">
+          <a href="#" class="ml active" data-page="home">Home</a>
+          <a href="#" class="ml" data-page="about">About Us</a>
+          <a href="#" class="ml" data-page="services">Services</a>
+          <a href="#" class="ml" data-page="designs">Designs</a>
+          <a href="#" class="ml" data-page="packages">Packages</a>
+          <a href="#" class="ml" data-page="contact">Contact</a>
+          <!-- Removed Terms, Privacy, Refund, Disclaimer from mobile menu -->
+      </div>
+    </nav>
+
+    <!-- MODAL -->
+    <div class="modal-bg" id="modal-bg">
+      <div class="modal-box" style="position: relative">
+        <button class="modal-close" id="modal-close">✕</button>
+        <div class="modal-img-area" id="modal-img-area"></div>
+        <div class="modal-gallery-ctrl" id="modal-gallery-ctrl"></div>
+        <div class="modal-body">
+          <div class="modal-cat" id="m-cat"></div>
+          <div class="modal-title" id="m-title"></div>
+          <div class="modal-desc" id="m-desc"></div>
+          <div class="modal-btns" style="display: none">
+            <button class="mb-prim">View Live</button>
+            <button class="mb-sec">Similar Projects</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- HOME -->
+    <!-- ========================================================= -->
+    <div id="page-home">
+      <section id="hero">
+        <div class="hero-slides-bg" id="hero-bg-slides"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-grid"></div>
+        <div class="horb horb1"></div>
+        <div class="horb horb2"></div>
+        <div class="horb horb3"></div>
+        <div class="hero-content">
+          <div class="hero-eyebrow">5+ Years of Digital Excellence</div>
+          <div id="hero-txt"></div>
+          <div class="hero-btns">
+            <button class="hbtn-prim" data-page="contact">
+              <span>Contact Us</span>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </button>
+            <button class="hbtn-out" data-page="services">What We Do?</button>
+          </div>
+        </div>
+        <div class="hero-dots" id="hero-dots"></div>
+      </section>
+
+      <!-- PROJECTS CALL TO ACTION MARQUEE -->
+      <div class="projects-marquee" data-page="designs">
+        <div class="pm-track">
+          <span class="pm-item"
+            ><svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="flex-shrink: 0"
+            >
+              <path
+                d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+              ></path>
+            </svg>
+            EXPLORE OUR PREMIUM WEBSITES & CREATIVE PROJECTS • CLICK HERE TO
+            VIEW ALL DESIGNS •</span
+          >
+          <span class="pm-item"
+            ><svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="flex-shrink: 0"
+            >
+              <path
+                d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+              ></path>
+            </svg>
+            EXPLORE OUR PREMIUM WEBSITES & CREATIVE PROJECTS • CLICK HERE TO
+            VIEW ALL DESIGNS •</span
+          >
+          <span class="pm-item"
+            ><svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="flex-shrink: 0"
+            >
+              <path
+                d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+              ></path>
+            </svg>
+            EXPLORE OUR PREMIUM WEBSITES & CREATIVE PROJECTS • CLICK HERE TO
+            VIEW ALL DESIGNS •</span
+          >
+          <span class="pm-item"
+            ><svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="flex-shrink: 0"
+            >
+              <path
+                d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+              ></path>
+            </svg>
+            EXPLORE OUR PREMIUM WEBSITES & CREATIVE PROJECTS • CLICK HERE TO
+            VIEW ALL DESIGNS •</span
+          >
+        </div>
+      </div>
+
+      <!-- CLIENTS MARQUEE -->
+      <section class="mq-section">
+        <div class="container">
+          <div class="mq-hd">
+            <div class="eye">Trusted By</div>
+            <h2>Brands That <span class="tg">Trust Us</span></h2>
+          </div>
+        </div>
+        <div class="mq-row"><div class="mq-track ltr" id="mq1"></div></div>
+        <div class="mq-row" style="margin-top: 0.75rem">
+          <div class="mq-track rtl" id="mq2"></div>
+        </div>
+      </section>
+
+      <!-- SERVICES, STATS, AND ABOUT MOVED TO DEDICATED PAGES -->
+
+      <!-- WHY CHOOSE US -->
+      <section class="section">
+        <div class="container">
+          <div class="why-g">
+            <div class="why-img rev left">
+              <div class="why-vis" style="position: relative; overflow: hidden">
+                <img
+                  src="images/why.png"
+                  alt="Our Team at Work"
+                  style="
+                    position: absolute;
+                    inset: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    opacity: 0.92;
+                    z-index: 1;
+                    border-radius: 1.5rem;
+                  "
+                />
+                <div
+                  style="
+                    position: absolute;
+                    inset: 0;
+                    background: linear-gradient(
+                      to top,
+                      rgba(0, 0, 0, 0.55) 0%,
+                      rgba(0, 0, 0, 0) 60%
+                    );
+                    z-index: 2;
+                    border-radius: 1.5rem;
+                  "
+                ></div>
+              </div>
+              <div class="about-badge ab1">
+                <div class="ab-num">5+</div>
+                <div class="ab-lbl">Years</div>
+              </div>
+              <div class="about-badge ab2">
+                <div class="ab-num">100%</div>
+                <div class="ab-lbl">Satisfaction</div>
+              </div>
+            </div>
+            <div>
+              <div class="rev right">
+                <span class="eye">Why Us</span>
+                <h2
+                  style="
+                    font-size: clamp(1.75rem, 3vw, 2.5rem);
+                    font-weight: 800;
+                    letter-spacing: -0.03em;
+                    margin: 0.75rem 0 1rem;
+                  "
+                >
+                  Why Choose <span class="tg">Team Infosoft?</span>
+                </h2>
+                <p
+                  style="
+                    color: var(--muted-fg);
+                    line-height: 1.75;
+                    font-size: 0.95rem;
+                  "
+                >
+                  We combine creativity, technology, and dedication to deliver
+                  digital solutions that drive real business results.
+                </p>
+              </div>
+              <div class="reasons-g" id="reasons-g"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO MOVED TO DEDICATED PAGE -->
+
+      <!-- PROCESS -->
+      <section class="section">
+        <div class="container">
+          <div class="sh rev up">
+            <span class="eye">How We Work</span>
+            <h2>Our <span class="tg">Process</span></h2>
+            <p>
+              We solve your IT needs through web products using a proven
+              methodology.
+            </p>
+          </div>
+          <div class="proc-grid" id="proc-g"></div>
+        </div>
+      </section>
+
+      <!-- TECH STACK -->
+      <section
+        class="section sdark"
+        style="position: relative; overflow: hidden"
+      >
+        <div
+          style="
+            position: absolute;
+            inset: 0;
+            opacity: 0.07;
+            background-image:
+              linear-gradient(
+                hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.3) 1px,
+                transparent 1px
+              ),
+              linear-gradient(
+                90deg,
+                hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.3) 1px,
+                transparent 1px
+              );
+            background-size: 55px 55px;
+          "
+        ></div>
+        <div class="container" style="position: relative; z-index: 1">
+          <div class="sh rev up">
+            <span class="eye">Technologies</span>
+            <h2 style="color: #fff">Our <span class="tg">Tech Stack</span></h2>
+            <p>
+              We use cutting-edge technologies to build powerful, scalable
+              digital solutions
+            </p>
+          </div>
+          <div class="tech-grid" id="tech-g"></div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section">
+        <div
+          style="
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 350px;
+            height: 350px;
+            background: hsla(
+              var(--accent-h),
+              var(--accent-s),
+              var(--accent-l),
+              0.05
+            );
+            border-radius: 50%;
+            filter: blur(70px);
+            transform: translate(50%, 50%);
+            pointer-events: none;
+          "
+        ></div>
+        <div class="container">
+          <div class="sh rev up">
+            <span class="eye">FAQ</span>
+            <h2>Frequently Asked <span class="tg">Questions</span></h2>
+            <p>
+              Got questions? We've got answers. Find everything you need to
+              know.
+            </p>
+          </div>
+          <div class="faq-list" id="faq-l"></div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section">
+        <div class="container">
+          <div class="cta-box rev up">
+            <div class="cta-bg"></div>
+            <div class="cta-orb1"></div>
+            <div class="cta-orb2"></div>
+            <div class="cta-inner">
+              <h2>
+                Ready to Build Your<br /><span class="tg"
+                  >Digital Presence?</span
+                >
+              </h2>
+              <p>
+                Let's create something amazing together. Get in touch with our
+                team and start your digital journey today.
+              </p>
+              <button class="hbtn-prim" data-page="contact">
+                <span>Contact Us</span>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="section-dark" id="footer-home">
+        <div class="footer-content" style="max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; color: #fff;">
+          <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between;">
+            <div style="flex: 1 1 220px; min-width: 220px;">
+              <h3 style="margin-bottom: 1rem; color: #fff;">Legal</h3>
+              <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <a href="#footer-terms" style="color: #fff; text-decoration: underline;">Terms & Conditions</a>
+                <a href="#footer-privacy" style="color: #fff; text-decoration: underline;">Privacy Policy</a>
+                <a href="#footer-cancellation" style="color: #fff; text-decoration: underline;">Cancellation & Refund</a>
+                <a href="#footer-disclaimer" style="color: #fff; text-decoration: underline;">Disclaimer</a>
+              </div>
+            </div>
+            <div style="flex: 2 1 400px; min-width: 300px;">
+              <h3 style="margin-bottom: 1rem; color: #fff;">Contact</h3>
+              <p style="margin: 0;">#28, 2nd Floor Nisa Complex, Tiruchedur Road, Murugankuruchi, Palai (Opp: City Union Bank), Tirunelveli – 627002, Tamil Nadu, India</p>
+              <p style="margin: 0;">📞 +91-462-4001400, 9159333359</p>
+              <p style="margin: 0;">✉️ <a href="mailto:info@itechacademy.in" style="color: #fff; text-decoration: underline;">info@itechacademy.in</a> / <a href="mailto:itechacademy@gmail.com" style="color: #fff; text-decoration: underline;">itechacademy@gmail.com</a></p>
+            </div>
+          </div>
+          <hr style="margin: 2rem 0; border: 0; border-top: 1px solid #444;" />
+          <div id="footer-terms">
+            <h4 style="color: #fff;">Terms & Conditions</h4>
+            <div style="color:#ccc; font-size:0.95rem; margin-bottom:0.5rem;">Last updated: March 2026</div>
+            <p>Welcome to our website. If you continue to browse and use this website you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern iTech's relationship with you in relation to this website.</p>
+            <p>The term 'iTech' or 'us' or 'we' refers to the owner of the website whose registered office is #28, 2nd Floor Nisa Complex, Tiruchedur Road, Murugankuruchi, Palai (Opp: City Union Bank), Tirunelveli – 627002, Tamil Nadu, India. The term 'you' refers to the user or viewer of our website.</p>
+            <h5>The use of this website is subject to the following terms of use:</h5>
+            <ul style="font-size: 0.95rem; color: #ccc; padding-left: 1.2em;">
+              <li>The content of the pages of this website is for your general information and use only. It is subject to change without notice.</li>
+              <li>Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.</li>
+              <li>Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services or information available through this website meet your specific requirements.</li>
+              <li>This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.</li>
+              <li>All trademarks reproduced in this website which are not the property of, or licensed to, the operator are acknowledged on the website.</li>
+              <li>Unauthorized use of this website may give rise to a claim for damages and/or be a criminal offence.</li>
+              <li>From time to time this website may also include links to other websites. These links are provided for your convenience to provide further information. They do not signify that we endorse the website(s). We have no responsibility for the content of the linked website(s).</li>
+              <li>You may not create a link to this website from another website or document without iTech's prior written consent.</li>
+              <li>Your use of this website and any dispute arising out of such use of the website is subject to the laws of India or other regulatory authority.</li>
+              <li>"We as a merchant shall be under no liability whatsoever in respect of any loss or damage arising directly or indirectly out of the decline of authorization for any Transaction, on Account of the Cardholder having exceeded the preset limit mutually agreed by us with our acquiring bank from time to time".</li>
+            </ul>
+          </div>
+          <div id="footer-privacy" style="margin-top: 2rem;">
+            <h4 style="color: #fff;">Privacy Policy</h4>
+            <div style="color:#ccc; font-size:0.95rem; margin-bottom:0.5rem;">Last updated: March 2026</div>
+            <p>This privacy policy sets out how iTech uses and protects any information that you give iTech when you use this website. iTech is committed to ensuring that your privacy is protected. Should we ask you to provide certain information by which you can be identified when using this website, then you can be assured that it will only be used in accordance with this privacy statement.</p>
+            <p>iTech may change this policy from time to time by updating this page. You should check this page from time to time to ensure that you are happy with any changes. This policy is effective from 01-11-2020.</p>
+            <h5>What we collect</h5>
+            <ul style="font-size: 0.95rem; color: #ccc; padding-left: 1.2em;">
+              <li>Name and job title</li>
+              <li>Contact information including email address</li>
+              <li>Demographic information such as postcode, preferences and interests</li>
+              <li>Other information relevant to customer surveys and/or offers</li>
+            </ul>
+            <h5>What we do with the information we gather</h5>
+            <ul style="font-size: 0.95rem; color: #ccc; padding-left: 1.2em;">
+              <li>Internal record keeping.</li>
+              <li>We may use the information to improve our products and services.</li>
+              <li>We may periodically send promotional emails about new products, special offers or other information which we think you may find interesting using the email address which you have provided.</li>
+              <li>From time to time, we may also use your information to contact you for market research purposes. We may contact you by email, phone, fax or mail. We may use the information to customise the website according to your interests.</li>
+            </ul>
+            <h5>Security</h5>
+            <p>We are committed to ensuring that your information is secure. In order to prevent unauthorised access or disclosure we have put in place suitable physical, electronic and managerial procedures to safeguard and secure the information we collect online.</p>
+            <h5>How we use cookies</h5>
+            <p>A cookie is a small file which asks permission to be placed on your computer's hard drive. Once you agree, the file is added and the cookie helps analyse web traffic or lets you know when you visit a particular site. Cookies allow web applications to respond to you as an individual. The web application can tailor its operations to your needs, likes and dislikes by gathering and remembering information about your preferences.</p>
+            <p>We use traffic log cookies to identify which pages are being used. This helps us analyse data about web page traffic and improve our website in order to tailor it to customer needs. We only use this information for statistical analysis purposes and then the data is removed from the system.</p>
+            <p>Overall, cookies help us provide you with a better website, by enabling us to monitor which pages you find useful and which you do not. A cookie in no way gives us access to your computer or any information about you, other than the data you choose to share with us. You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer. This may prevent you from taking full advantage of the website.</p>
+            <h5>Links to other websites</h5>
+            <p>Our website may contain links to other websites of interest. However, once you have used these links to leave our site, you should note that we do not have any control over that other website. Therefore, we cannot be responsible for the protection and privacy of any information which you provide whilst visiting such sites and such sites are not governed by this privacy statement. You should exercise caution and look at the privacy statement applicable to the website in question.</p>
+            <h5>Controlling your personal information</h5>
+            <ul style="font-size: 0.95rem; color: #ccc; padding-left: 1.2em;">
+              <li>Whenever you are asked to fill in a form on the website, look for the box that you can click to indicate that you do not want the information to be used by anybody for direct marketing purposes.</li>
+              <li>If you have previously agreed to us using your personal information for direct marketing purposes, you may change your mind at any time by writing to or emailing us at info@itechacademy.in</li>
+            </ul>
+            <p>We will not sell, distribute or lease your personal information to third parties unless we have your permission or are required by law to do so. We may use your personal information to send you promotional information about third parties which we think you may find interesting if you tell us that you wish this to happen.</p>
+            <p>You may request details of personal information which we hold about you under the Data Protection Act 1998. A small fee will be payable. If you would like a copy of the information held on you please write to iTech, #28, 2nd Floor Nisa Complex, Tiruchedur Road, Murugankuruchi, Palai (Opp: City Union Bank), Tirunelveli – 627002, Tamil Nadu, India.</p>
+            <p>If you believe that any information we are holding on you is incorrect or incomplete, please write to or email us as soon as possible at the above address. We will promptly correct any information found to be incorrect.</p>
+            <h5>Contacting Us</h5>
+            <p>If there are any questions regarding this privacy policy you may contact us using the information below:</p>
+            <p><strong>iTech Academy</strong><br>#28, 2nd Floor Nisa Complex,<br>Tiruchedur Road, Murugankuruchi, Palai<br>(Opp: City Union Bank)<br>Tirunelveli – 627002, Tamil Nadu, India<br>📞 +91-462-4001400, 9159333359<br>✉️ info@itechacademy.in / itechacademy@gmail.com</p>
+          </div>
+          <div id="footer-cancellation" style="margin-top: 2rem;">
+            <h4 style="color: #fff;">Cancellation & Refund</h4>
+            <div style="color:#ccc; font-size:0.95rem; margin-bottom:0.5rem;">Last updated: March 2026</div>
+            <h5>Cancellation Policy</h5>
+            <ul style="font-size: 0.95rem; color: #ccc; padding-left: 1.2em;">
+              <li>Cancellations will be considered only if the request is made within 72 hours of placing an order. However, the cancellation request will not be entertained if the orders have been communicated to the vendors/merchants and they have initiated the process of shipping them.</li>
+              <li>There is no cancellation of orders placed under the Same Day Delivery category.</li>
+              <li>No cancellations are entertained for those products that the iTech marketing team has obtained on special occasions like Pongal, Diwali, Valentine's Day etc. These are limited occasion offers and therefore cancellations are not possible.</li>
+              <li>iTech does not accept cancellation requests for perishable items like flowers, eatables etc. However, refund/replacement can be made if the customer establishes that the quality of product delivered is not good.</li>
+              <li>In case of receipt of damaged or defective consumer durable items and non-durable items like mobile phones, mixer grinder, calculator etc, please report the same to our Customer Service team. The request will, however, be entertained once the merchant has checked and determined the same at his own end. This should be reported within 21 days of receipt of the products. For books, VCDs, DVDs, software products, the matter should be reported within 5 days.</li>
+              <li>In case you feel that the product received is not as shown on the site or as per your expectations, you must bring it to the notice of our customer service within 24 hours of receiving the product. The Customer Service Team after looking into your complaint will take an appropriate decision.</li>
+              <li>In case of complaints regarding products that come with a warranty from manufacturers, please refer the issue to them.</li>
+            </ul>
+            <h5>Refund Policy</h5>
+            <p style="font-size: 0.95rem; color: #ccc;">When you buy our products/services, your purchase is covered by our 30-day money-back guarantee. If you are, for any reason, not entirely happy with your purchase, we will cheerfully issue a full refund. We develop and sell software that we use ourselves every day and have thousands of satisfied customers worldwide, and our support is second to none. That is why we can afford to back our products with this special guarantee.</p>
+            <p style="font-size: 0.95rem; color: #ccc;">To request a refund, simply contact us with your purchase details within ninety (90) days of your purchase. Please include your order number (sent to you via email after ordering) and optionally tell us why you're requesting a refund – we take customer feedback very seriously and use it to constantly improve our products and quality of service. Refunds are not being provided for services delivered in full such as installation service and provided knowledge base hosting service. Refunds are being processed within 21 days period.</p>
+          </div>
+          <div id="footer-disclaimer" style="margin-top: 2rem;">
+            <h4 style="color: #fff;">Disclaimer</h4>
+            <div style="color:#ccc; font-size:0.95rem; margin-bottom:0.5rem;">Last updated: March 2026</div>
+            <p style="font-size: 0.95rem; color: #ccc;">The information contained in this website is for general information purposes only. The information is provided by iTech and while we endeavor to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk.</p>
+            <p style="font-size: 0.95rem; color: #ccc;">In no event will we be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this website.</p>
+            <p style="font-size: 0.95rem; color: #ccc;">Through this website you are able to link to other websites which are not under the control of iTech. We have no control over the nature, content and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.</p>
+            <p style="font-size: 0.95rem; color: #ccc;">Every effort is made to keep the website up and running smoothly. However, iTech takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.</p>
+          </div>
+          <div style="margin-top: 2rem; text-align: center; color: #888; font-size: 0.9rem;">&copy; 2026 iTech. All rights reserved.</div>
+        </div>
+      </footer>
+    </div>
+    <!-- /home -->
+
+    <!-- ========================================================= -->
+    <!-- ABOUT -->
+    <!-- ========================================================= -->
+    <div id="page-about" style="display: none">
+      <div class="page-hero">
+        <div class="container">
+          <div class="rev up">
+            <h1>About <span class="tg">Us</span></h1>
+            <p>
+              5 Years of Experience, 700+ Projects, Footprints across all of
+              India
+            </p>
+          </div>
+        </div>
+      </div>
+      <section class="section">
+        <div class="container">
+          <div class="about-g">
+            <div class="about-txt rev left">
+              <h2>Our <span class="tg">Story</span></h2>
+              <p>
+                We first started the journey by providing website designing
+                services to local clients. As compared to today, the market was
+                a dead one at that period and we got very few clients. People
+                have now understood the importance of a good website and the
+                benefits that can be derived from it.
+              </p>
+              <p>
+                We continued providing website designing services and now we are
+                the most promising website designing and domain registration
+                company. Whether one needs an eye-catching website, top search
+                engine positions, high-end software or a tricky lead capturing
+                system — we come up with the solution.
+              </p>
+              <div class="chklist">
+                <div class="chi">
+                  <svg
+                    class="chk"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                  >
+                    <polyline points="20 6 9 17 4 12" /></svg
+                  >Professional team
+                </div>
+                <div class="chi">
+                  <svg
+                    class="chk"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                  >
+                    <polyline points="20 6 9 17 4 12" /></svg
+                  >Modern technologies
+                </div>
+                <div class="chi">
+                  <svg
+                    class="chk"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                  >
+                    <polyline points="20 6 9 17 4 12" /></svg
+                  >Timely delivery
+                </div>
+                <div class="chi">
+                  <svg
+                    class="chk"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                  >
+                    <polyline points="20 6 9 17 4 12" /></svg
+                  >24/7 Support
+                </div>
+              </div>
+            </div>
+            <div class="about-img-w rev right">
+              <div
+                class="about-vis"
+                style="position: relative; overflow: hidden"
+              >
+                <img
+                  src="images/image2.jpg"
+                  alt="Our Story"
+                  style="
+                    position: absolute;
+                    inset: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    opacity: 0.92;
+                    z-index: 1;
+                    border-radius: 1.5rem;
+                  "
+                />
+                <div
+                  style="
+                    position: absolute;
+                    inset: 0;
+                    background: linear-gradient(
+                      to top,
+                      rgba(0, 0, 0, 0.55) 0%,
+                      rgba(0, 0, 0, 0) 60%
+                    );
+                    z-index: 2;
+                    border-radius: 1.5rem;
+                  "
+                ></div>
+              </div>
+              <div class="about-badge ab1">
+                <div class="ab-num">700+</div>
+                <div class="ab-lbl">Projects</div>
+              </div>
+              <div class="about-badge ab2">
+                <div class="ab-num">5+</div>
+                <div class="ab-lbl">Years</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="stats-s sdark">
+        <div class="container">
+          <div class="stats-grid" id="about-stats"></div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="sh rev up">
+            <h2>Our <span class="tg">Values</span></h2>
+          </div>
+          <div class="val-grid" id="val-g"></div>
+        </div>
+      </section>
+      <footer id="footer-about"></footer>
+    </div>
+
+    <!-- SERVICES -->
+    <div id="page-services" style="display: none">
+      <div class="page-hero">
+        <div class="container">
+          <div class="rev up">
+            <h1>Our <span class="tg">Services</span></h1>
+            <p>Comprehensive digital solutions to elevate your business</p>
+          </div>
+        </div>
+      </div>
+      <section class="section">
+        <div class="container">
+          <div class="srv-page-grid" id="srv-page-g"></div>
+        </div>
+      </section>
+      <footer id="footer-services"></footer>
+    </div>
+
+    <!-- DESIGNS -->
+    <div id="page-designs" style="display: none">
+      <div
+        id="des-sp"
+        style="
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 3px;
+          background: linear-gradient(90deg, var(--primary), var(--accent));
+          width: 0%;
+          z-index: 200;
+        "
+      ></div>
+      <div class="page-hero">
+        <div class="container">
+          <div class="rev up">
+            <h1>Our <span class="tg">Designs</span></h1>
+            <p>Showcasing our creative work and digital craftsmanship</p>
+          </div>
+        </div>
+      </div>
+      <section class="section">
+        <div class="container">
+          <div class="filter-row" id="filt-row"></div>
+          <div class="des-grid" id="des-g"></div>
+        </div>
+      </section>
+      <footer id="footer-designs"></footer>
+    </div>
+
+    <!-- PACKAGES -->
+    <div id="page-packages" style="display: none">
+      <div class="page-hero">
+        <div class="container">
+          <div class="rev up">
+            <h1>Our <span class="tg">Packages</span></h1>
+            <p>Affordable plans designed to fit every business need</p>
+          </div>
+        </div>
+      </div>
+      <section class="section">
+        <div class="container"><div class="pkg-grid" id="pkg-g"></div></div>
+      </section>
+      <footer id="footer-packages"></footer>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="page-contact" style="display: none">
+      <div class="page-hero">
+        <div class="container">
+          <div class="rev up">
+            <h1>Get In <span class="tg">Touch</span></h1>
+            <p>Ready to start your project? We'd love to hear from you.</p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-page">
+        <div class="container">
+          <div class="contact-g">
+            <div class="contact-left rev left">
+              <h2>Let's <span class="tg">Connect</span></h2>
+              <p>
+                Have a project in mind? We're here to turn your vision into
+                reality with the perfect digital solution.
+              </p>
+              <div class="c-detail">
+                <div class="c-ico">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <polyline points="2,4 12,14 22,4" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="c-lbl">Email</div>
+                  <div class="c-val">teaminfosoftindia@gmail.com</div>
+                </div>
+              </div>
+              <div class="c-detail">
+                <div class="c-ico">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.58 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 5.97 5.97l1.46-1.46a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div class="c-lbl">Phone</div>
+                  <div class="c-val">+91 462 4001400 / +91 9788 125 125</div>
+                </div>
+              </div>
+              <div class="c-detail">
+                <div class="c-ico">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"
+                    />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="c-lbl">Location</div>
+                  <div class="c-val">
+                    #28, Nisha Complex, (OPP City Union Bank), Murugankurichi,
+                    Tiruchendur Road, Palayamkottai, Tirunelveli – 627 002
+                  </div>
+                </div>
+              </div>
+              <div class="contact-info-vis">
+                <div class="ci-orb ci-orb1"></div>
+                <div class="ci-orb ci-orb2"></div>
+                <div class="ci-inner">
+                  <div
+                    style="
+                      font-family: var(--font-h);
+                      font-weight: 700;
+                      color: #fff;
+                      font-size: 1rem;
+                      margin-bottom: 1.25rem;
+                    "
+                  >
+                    Why Work With Us?
+                  </div>
+                  <div class="ci-stat">
+                    <div
+                      class="ci-icon"
+                      style="background: var(--accent-15); color: var(--accent)"
+                    >
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                      >
+                        <polygon
+                          points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
+                        />
+                      </svg>
+                    </div>
+                    <div class="ci-text">
+                      <strong>Fast turnaround</strong> — 7–15 day delivery
+                    </div>
+                  </div>
+                  <div class="ci-stat">
+                    <div
+                      class="ci-icon"
+                      style="
+                        background: var(--primary-15);
+                        color: var(--primary);
+                      "
+                    >
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                      >
+                        <path
+                          d="M12 22s-8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="ci-text">
+                      <strong>Secure & reliable</strong> — SSL + backups
+                    </div>
+                  </div>
+                  <div class="ci-stat">
+                    <div
+                      class="ci-icon"
+                      style="background: var(--brown-15); color: var(--brown)"
+                    >
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                      >
+                        <path
+                          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                        />
+                      </svg>
+                    </div>
+                    <div class="ci-text">
+                      <strong>Dedicated support</strong> — Your PM always on
+                      call
+                    </div>
+                  </div>
+                  <div class="ci-stat">
+                    <div
+                      class="ci-icon"
+                      style="background: var(--accent-15); color: var(--accent)"
+                    >
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                      >
+                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                        <polyline points="17 6 23 6 23 12" />
+                      </svg>
+                    </div>
+                    <div class="ci-text">
+                      <strong>SEO optimised</strong> — Rank higher on Google
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="rev right">
+              <div class="contact-form-box">
+                <div class="cfb-glow"></div>
+                <div style="margin-bottom: 2rem">
+                  <h3
+                    style="
+                      font-family: var(--font-h);
+                      font-size: 1.4rem;
+                      font-weight: 800;
+                      letter-spacing: -0.02em;
+                      margin-bottom: 0.375rem;
+                    "
+                  >
+                    Send Us a Message
+                  </h3>
+                  <p style="color: var(--muted-fg); font-size: 0.875rem">
+                    Fill in the form below and we'll get back to you within 24
+                    hours.
+                  </p>
+                </div>
+                <form id="contact-form">
+                  <div class="form-g">
+                    <div class="fl-wrap">
+                      <input
+                        type="text"
+                        class="finp fl-input"
+                        id="f-name"
+                        name="name"
+                        placeholder=" "
+                        required
+                      /><label class="fl-label" for="f-name">Your Name</label>
+                    </div>
+                    <div class="fl-wrap">
+                      <input
+                        type="email"
+                        class="finp fl-input"
+                        id="f-email"
+                        name="email"
+                        placeholder=" "
+                        required
+                      /><label class="fl-label" for="f-email"
+                        >Email Address</label
+                      >
+                    </div>
+                  </div>
+                  <div class="fl-wrap" style="margin-bottom: 1.25rem">
+                    <input
+                      type="text"
+                      class="finp fl-input"
+                      id="f-sub"
+                      name="subject"
+                      placeholder=" "
+                      required
+                    /><label class="fl-label" for="f-sub">Subject</label>
+                  </div>
+                  <div
+                    class="fl-wrap"
+                    style="margin-bottom: 1.5rem; position: relative"
+                  >
+                    <textarea
+                      class="ftxt fl-input"
+                      id="f-msg"
+                      name="message"
+                      rows="5"
+                      placeholder=" "
+                      required
+                      style="padding-top: 1.5rem"
+                    ></textarea>
+                    <label
+                      class="fl-label"
+                      for="f-msg"
+                      style="top: 1.5rem; transform: none"
+                      >Your Message</label
+                    >
+                  </div>
+                  <button type="submit" class="f-submit">
+                    <span>Send Message</span>
+                    <svg
+                      width="17"
+                      height="17"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <line x1="22" y1="2" x2="11" y2="13" />
+                      <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                    </svg>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer id="footer-contact"></footer>
+    </div>
+
+    <!-- LEGAL PAGES -->
+    <div id="page-terms" style="display: none">
+      <style>
+        .legal-container {
+          max-width: 900px;
+          margin: 60px auto;
+          background-color: white;
+          padding: 40px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
+        }
+        .legal-h1 {
+          color: #2c3e50;
+          margin-bottom: 10px;
+          border-bottom: 3px solid #3498db;
+          padding-bottom: 10px;
+          font-size: 2em;
+        }
+        .legal-updated {
+          color: #7f8c8d;
+          font-size: 14px;
+          margin-bottom: 30px;
+        }
+        .legal-h2 {
+          color: #2c3e50;
+          margin-top: 30px;
+          margin-bottom: 15px;
+          font-size: 1.5em;
+        }
+        .legal-p {
+          margin-bottom: 15px;
+          text-align: justify;
+          line-height: 1.6;
+        }
+        .legal-ol, .legal-ul {
+          margin-left: 30px;
+          margin-bottom: 15px;
+        }
+        .legal-li {
+          margin-bottom: 10px;
+          text-align: justify;
+          line-height: 1.6;
+        }
+        .legal-contact {
+          background-color: #ecf0f1;
+          padding: 20px;
+          border-left: 4px solid #3498db;
+          margin-top: 30px;
+          border-radius: 4px;
+        }
+        .legal-contact p {
+          margin-bottom: 8px;
+        }
+      </style>
+      <div class="legal-container">
+        <h1 class="legal-h1">Terms & Conditions</h1>
+        <p class="legal-updated">Last updated: March 2026</p>
+        <p class="legal-p">
+          Welcome to our website. If you continue to browse and use this website
+          you are agreeing to comply with and be bound by the following terms and
+          conditions of use, which together with our privacy policy govern Team
+          Info Soft's relationship with you in relation to this website.
+        </p>
+        <p class="legal-p">
+          The term 'Team Info Soft' or 'us' or 'we' refers to the owner of the
+          website whose registered office is #28, Nisha Complex, Palayamkottai,
+          Tirunelveli – 627 002. The term 'you' refers to the user or viewer of
+          our website.
+        </p>
+        <h2 class="legal-h2">The use of this website is subject to the following terms of use:</h2>
+        <ol class="legal-ol">
+          <li class="legal-li">
+            The content of the pages of this website is for your general
+            information and use only. It is subject to change without notice.
+          </li>
+          <li class="legal-li">
+            Neither we nor any third parties provide any warranty or guarantee as
+            to the accuracy, timeliness, performance, completeness or suitability
+            of the information and materials found or offered on this website for
+            any particular purpose. You acknowledge that such information and
+            materials may contain inaccuracies or errors and we expressly exclude
+            liability for any such inaccuracies or errors to the fullest extent
+            permitted by law.
+          </li>
+          <li class="legal-li">
+            Your use of any information or materials on this website is entirely
+            at your own risk, for which we shall not be liable. It shall be your
+            own responsibility to ensure that any products, services or
+            information available through this website meet your specific
+            requirements.
+          </li>
+          <li class="legal-li">
+            This website contains material which is owned by or licensed to us.
+            This material includes, but is not limited to, the design, layout,
+            look, appearance and graphics. Reproduction is prohibited other than
+            in accordance with the copyright notice, which forms part of these
+            terms and conditions.
+          </li>
+          <li class="legal-li">
+            All trademarks reproduced in this website which are not the property
+            of, or licensed to, the operator are acknowledged on the website.
+          </li>
+          <li class="legal-li">
+            Unauthorized use of this website may give rise to a claim for damages
+            and/or be a criminal offence.
+          </li>
+          <li class="legal-li">
+            From time to time this website may also include links to other
+            websites. These links are provided for your convenience to provide
+            further information. They do not signify that we endorse the
+            website(s). We have no responsibility for the content of the linked
+            website(s).
+          </li>
+          <li class="legal-li">
+            You may not create a link to this website from another website or
+            document without Team Info Soft's prior written consent.
+          </li>
+          <li class="legal-li">
+            Your use of this website and any dispute arising out of such use of
+            the website is subject to the laws of India or other regulatory
+            authority.
+          </li>
+          <li class="legal-li">
+            "We as a merchant shall be under no liability whatsoever in respect of
+            any loss or damage arising directly or indirectly out of the decline
+            of authorization for any Transaction, on Account of the Cardholder
+            having exceeded the preset limit mutually agreed by us with our
+            acquiring bank from time to time".
+          </li>
+        </ol>
+        <div class="legal-contact">
+          <h3>Contact Information</h3>
+          <p><strong>Team Info Soft</strong></p>
+          <p>#28, Nisha Complex, Palayamkottai,<br />Tirunelveli – 627 002</p>
+          <p>📞 +91 462 4001400 | +91 9788 125 125</p>
+          <p>
+            ✉️
+            <a href="mailto:teaminfosoftindia@gmail.com"
+              >teaminfosoftindia@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="page-privacy" style="display: none">
+      <div class="legal-container">
+        <h1 class="legal-h1">Privacy Policy</h1>
+        <p class="legal-updated">Last updated: March 2026</p>
+        <p class="legal-p">
+          This privacy policy sets out how Team Info Soft uses and protects any
+          information that you give Team Info Soft when you use this website. Team
+          Info Soft is committed to ensuring that your privacy is protected.
+          Should we ask you to provide certain information by which you can be
+          identified when using this website, then you can be assured that it will
+          only be used in accordance with this privacy statement.
+        </p>
+        <p class="legal-p">
+          Team Info Soft may change this policy from time to time by updating this
+          page. You should check this page from time to time to ensure that you
+          are happy with any changes. This policy is effective from 01-11-2020.
+        </p>
+        <h2 class="legal-h2">What we collect</h2>
+        <p class="legal-p">We may collect the following information:</p>
+        <ul class="legal-ul">
+          <li class="legal-li">Name and job title</li>
+          <li class="legal-li">Contact information including email address</li>
+          <li class="legal-li">
+            Demographic information such as postcode, preferences and interests
+          </li>
+          <li class="legal-li">Other information relevant to customer surveys and/or offers</li>
+        </ul>
+        <h2 class="legal-h2">What we do with the information we gather</h2>
+        <p class="legal-p">
+          We require this information to understand your needs and provide you
+          with a better service, and in particular for the following reasons:
+        </p>
+        <ul class="legal-ul">
+          <li class="legal-li">Internal record keeping.</li>
+          <li class="legal-li">
+            We may use the information to improve our products and services.
+          </li>
+          <li class="legal-li">
+            We may periodically send promotional emails about new products,
+            special offers or other information which we think you may find
+            interesting using the email address which you have provided.
+          </li>
+          <li class="legal-li">
+            From time to time, we may also use your information to contact you for
+            market research purposes. We may contact you by email, phone, fax or
+            mail. We may use the information to customise the website according to
+            your interests.
+          </li>
+        </ul>
+        <h2 class="legal-h2">Security</h2>
+        <p class="legal-p">
+          We are committed to ensuring that your information is secure. In order
+          to prevent unauthorised access or disclosure we have put in place
+          suitable physical, electronic and managerial procedures to safeguard and
+          secure the information we collect online.
+        </p>
+        <h2 class="legal-h2">How we use cookies</h2>
+        <p class="legal-p">
+          A cookie is a small file which asks permission to be placed on your
+          computer's hard drive. Once you agree, the file is added and the cookie
+          helps analyse web traffic or lets you know when you visit a particular
+          site. Cookies allow web applications to respond to you as an individual.
+          The web application can tailor its operations to your needs, likes and
+          dislikes by gathering and remembering information about your
+          preferences.
+        </p>
+        <p class="legal-p">
+          We use traffic log cookies to identify which pages are being used. This
+          helps us analyse data about web page traffic and improve our website in
+          order to tailor it to customer needs. We only use this information for
+          statistical analysis purposes and then the data is removed from the
+          system.
+        </p>
+        <p class="legal-p">
+          Overall, cookies help us provide you with a better website, by enabling
+          us to monitor which pages you find useful and which you do not. A cookie
+          in no way gives us access to your computer or any information about you,
+          other than the data you choose to share with us. You can choose to
+          accept or decline cookies. Most web browsers automatically accept
+          cookies, but you can usually modify your browser setting to decline
+          cookies if you prefer. This may prevent you from taking full advantage
+          of the website.
+        </p>
+        <h2 class="legal-h2">Links to other websites</h2>
+        <p class="legal-p">
+          Our website may contain links to other websites of interest. However,
+          once you have used these links to leave our site, you should note that
+          we do not have any control over that other website. Therefore, we cannot
+          be responsible for the protection and privacy of any information which
+          you provide whilst visiting such sites and such sites are not governed
+          by this privacy statement. You should exercise caution and look at the
+          privacy statement applicable to the website in question.
+        </p>
+        <h2 class="legal-h2">Controlling your personal information</h2>
+        <p class="legal-p">
+          You may choose to restrict the collection or use of your personal
+          information in the following ways:
+        </p>
+        <ul class="legal-ul">
+          <li class="legal-li">
+            Whenever you are asked to fill in a form on the website, look for the
+            box that you can click to indicate that you do not want the
+            information to be used by anybody for direct marketing purposes.
+          </li>
+          <li class="legal-li">
+            If you have previously agreed to us using your personal information
+            for direct marketing purposes, you may change your mind at any time by
+            writing to or emailing us at
+            <a href="mailto:teaminfosoftindia@gmail.com"
+              >teaminfosoftindia@gmail.com</a
+            >
+          </li>
+        </ul>
+        <p class="legal-p">
+          We will not sell, distribute or lease your personal information to third
+          parties unless we have your permission or are required by law to do so.
+          We may use your personal information to send you promotional information
+          about third parties which we think you may find interesting if you tell
+          us that you wish this to happen.
+        </p>
+        <p class="legal-p">
+          You may request details of personal information which we hold about you
+          under the Data Protection Act 1998. A small fee will be payable. If you
+          would like a copy of the information held on you please write to Team
+          Info Soft, #28, Nisha Complex, Palayamkottai, Tirunelveli – 627 002.
+        </p>
+        <p class="legal-p">
+          If you believe that any information we are holding on you is incorrect
+          or incomplete, please write to or email us as soon as possible at the
+          above address. We will promptly correct any information found to be
+          incorrect.
+        </p>
+        <div class="legal-contact">
+          <h3>Contacting Us</h3>
+          <p>
+            If there are any questions regarding this privacy policy you may
+            contact us using the information below:
+          </p>
+          <p><strong>Team Info Soft</strong></p>
+          <p>#28, Nisha Complex, Palayamkottai,<br />Tirunelveli – 627 002</p>
+          <p>📞 +91 462 4001400 | +91 9788 125 125</p>
+          <p>
+            ✉️
+            <a href="mailto:teaminfosoftindia@gmail.com"
+              >teaminfosoftindia@gmail.com</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="page-refund" style="display: none">
+      <div class="legal-container">
+        <h1 class="legal-h1">Cancellation & Refund</h1>
+        <p class="legal-updated">Last updated: March 2026</p>
+        <h2 class="legal-h2">Cancellation Policy</h2>
+        <p class="legal-p">
+          Team Info Soft believes in helping its customers as far as possible, and
+          has therefore a liberal cancellation policy. Under this policy:
+        </p>
+        <ul class="legal-ul">
+          <li class="legal-li">
+            Cancellations will be considered only if the request is made within 72
+            hours of placing an order. However, the cancellation request will not
+            be entertained if the orders have been communicated to the
+            vendors/merchants and they have initiated the process of shipping
+            them.
+          </li>
+          <li class="legal-li">
+            There is no cancellation of orders placed under the Same Day Delivery
+            category.
+          </li>
+          <li class="legal-li">
+            No cancellations are entertained for those products that the Team Info
+            Soft marketing team has obtained on special occasions like Pongal,
+            Diwali, Valentine's Day etc. These are limited occasion offers and
+            therefore cancellations are not possible.
+          </li>
+          <li class="legal-li">
+            Team Info Soft does not accept cancellation requests for perishable
+            items like flowers, eatables etc. However, refund/replacement can be
+            made if the customer establishes that the quality of product delivered
+            is not good.
+          </li>
+          <li class="legal-li">
+            In case of receipt of damaged or defective consumer durable items and
+            non-durable items like mobile phones, mixer grinder, calculator etc,
+            please report the same to our Customer Service team. The request will,
+            however, be entertained once the merchant has checked and determined
+            the same at his own end. This should be reported within 21 days of
+            receipt of the products. For books, VCDs, DVDs, software products, the
+            matter should be reported within 5 days.
+          </li>
+          <li class="legal-li">
+            In case you feel that the product received is not as shown on the site
+            or as per your expectations, you must bring it to the notice of our
+            customer service within 24 hours of receiving the product. The
+            Customer Service Team after looking into your complaint will take an
+            appropriate decision.
+          </li>
+          <li class="legal-li">
+            In case of complaints regarding products that come with a warranty
+            from manufacturers, please refer the issue to them.
+          </li>
+        </ul>
+        <h2 class="legal-h2">Refund Policy</h2>
+        <p class="legal-p">
+          When you buy our products/services, your purchase is covered by our
+          30-day money-back guarantee. If you are, for any reason, not entirely
+          happy with your purchase, we will cheerfully issue a full refund. We
+          develop and sell software that we use ourselves every day and have
+          thousands of satisfied customers worldwide, and our support is second to
+          none. That is why we can afford to back our products with this special
+          guarantee.
+        </p>
+        <p class="legal-p">
+          To request a refund, simply contact us with your purchase details within
+          ninety (90) days of your purchase. Please include your order number
+          (sent to you via email after ordering) and optionally tell us why you're
+          requesting a refund – we take customer feedback very seriously and use
+          it to constantly improve our products and quality of service. Refunds
+          are not being provided for services delivered in full such as
+          installation service and provided knowledge base hosting service.
+          Refunds are being processed within 21 days period.
+        </p>
+        <div class="legal-contact">
+          <h3>Contact Information</h3>
+          <p><strong>Team Info Soft</strong></p>
+          <p>#28, Nisha Complex, Palayamkottai,<br />Tirunelveli – 627 002</p>
+          <p>📞 +91 462 4001400 | +91 9788 125 125</p>
+          <p>
+            ✉️
+            <a href="mailto:teaminfosoftindia@gmail.com"
+              >teaminfosoftindia@gmail.com</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="page-disclaimer" style="display: none">
+      <div class="legal-container">
+        <h1 class="legal-h1">Disclaimer</h1>
+        <p class="legal-updated">Last updated: March 2026</p>
+        <p class="legal-p">
+          The information contained in this website is for general information
+          purposes only. The information is provided by Team Info Soft and while
+          we endeavor to keep the information up to date and correct, we make no
+          representations or warranties of any kind, express or implied, about the
+          completeness, accuracy, reliability, suitability or availability with
+          respect to the website or the information, products, services, or
+          related graphics contained on the website for any purpose. Any reliance
+          you place on such information is therefore strictly at your own risk.
+        </p>
+        <p class="legal-p">
+          In no event will we be liable for any loss or damage including without
+          limitation, indirect or consequential loss or damage, or any loss or
+          damage whatsoever arising from loss of data or profits arising out of,
+          or in connection with, the use of this website.
+        </p>
+        <p class="legal-p">
+          Through this website you are able to link to other websites which are
+          not under the control of Team Info Soft. We have no control over the
+          nature, content and availability of those sites. The inclusion of any
+          links does not necessarily imply a recommendation or endorse the views
+          expressed within them.
+        </p>
+        <p class="legal-p">
+          Every effort is made to keep the website up and running smoothly.
+          However, Team Info Soft takes no responsibility for, and will not be
+          liable for, the website being temporarily unavailable due to technical
+          issues beyond our control.
+        </p>
+        <div class="legal-contact">
+          <h3>Contact Information</h3>
+          <p><strong>Team Info Soft</strong></p>
+          <p>#28, Nisha Complex, Palayamkottai,<br />Tirunelveli – 627 002</p>
+          <p>📞 +91 462 4001400 | +91 9788 125 125</p>
+          <p>
+            ✉️
+            <a href="mailto:teaminfosoftindia@gmail.com"
+              >teaminfosoftindia@gmail.com</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ============================================================
+      // HASH SCROLL HANDLING - RUN FIRST
+      // ============================================================
+      (function () {
+        const hash = window.location.hash.slice(1);
+        if (hash === "hero") {
+          // Disable default smooth scroll behavior temporarily
+          const style = document.createElement("style");
+          style.textContent = "html { scroll-behavior: auto; }";
+          document.head.appendChild(style);
+
+          // Wait for DOM and scroll to hero
+          window.addEventListener("load", function scrollToHero() {
+            const el = document.getElementById("hero");
+            if (el) {
+              el.scrollIntoView(true); // Instant scroll first
+              // Then smooth scroll
+              setTimeout(() => {
+                el.scrollIntoView({ behavior: "smooth", block: "start" });
+              }, 100);
+            }
+            window.removeEventListener("load", scrollToHero);
+          });
+        }
+        // Footer legal links smooth scroll
+        document.addEventListener("DOMContentLoaded", function () {
+          const footerLinks = [
+            "footer-terms",
+            "footer-privacy",
+            "footer-cancellation",
+            "footer-disclaimer"
+          ];
+          footerLinks.forEach(function (id) {
+            const link = document.querySelector('a[href="#' + id + '"]');
+            const section = document.getElementById(id);
+            if (link && section) {
+              link.addEventListener("click", function (e) {
+                e.preventDefault();
+                section.scrollIntoView({ behavior: "smooth", block: "start" });
+              });
+            }
+          });
+        });
+      })();
+
+      // ============================================================
+      // DATA
+      // ============================================================
+      const si = (p, s = 24) =>
+        `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
+
+      const SLIDES = [
+        {
+          title: "Modern Website Design Solutions",
+          sub: "Responsive • Fast • Professional. We create modern websites for businesses that look stunning on any screen size.",
+        },
+        {
+          title: "Creative UI / UX Experiences",
+          sub: "Elegant Design with Smooth Navigation. Figma screens, mobile app UI, dashboard layouts, and creative design workflows.",
+        },
+        {
+          title: "Powerful Web Development",
+          sub: "Built with Modern Technologies. VS Code, coding screens, robust backend structures, and high performance clean code setups.",
+        },
+        {
+          title: "Website Maintenance & Support",
+          sub: "Secure • Updated • Optimized. Technical support, dashboard monitoring, regular updates, and comprehensive maintenance workflows.",
+        },
+        {
+          title: "Scale Your Digital Presence",
+          sub: "Grow Your Brand Online. Custom B2B web strategies, technical search engine optimization, and dedicated digital solutions to help your business stand out globally.",
+        },
+      ];
+      const SLIDE_COLORS = [
+        "var(--primary)",
+        "var(--accent)",
+        "var(--brown)",
+        "hsl(26, 95%, 65%)",
+        "hsl(218, 90%, 65%)",
+      ];
+
+      const escSvg = (s) =>
+        String(s)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#39;");
+      const svgToDataURI = (svg) =>
+        `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+
+      function makeHeroSlideSvg({ title, step }, c1, c2) {
+        const t = escSvg(title);
+        // Abstract background that matches your brand colors.
+        return `
+  <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+    <defs>
+      <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="${c1}" stop-opacity="0.95"/>
+        <stop offset="1" stop-color="${c2}" stop-opacity="0.95"/>
+      </linearGradient>
+      <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="70"/>
+      </filter>
+      <pattern id="grid" width="70" height="70" patternUnits="userSpaceOnUse">
+        <path d="M70 0H0V70" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+      </pattern>
+    </defs>
+    <rect width="1600" height="900" fill="url(#g)"/>
+    <rect width="1600" height="900" fill="url(#grid)" opacity="0.14"/>
+    <circle cx="280" cy="260" r="260" fill="${c1}" opacity="0.25" filter="url(#blur)"/>
+    <circle cx="1260" cy="660" r="330" fill="${c2}" opacity="0.22" filter="url(#blur)"/>
+    <g opacity="0.18">
+      <path d="M100 720 C 320 560, 480 650, 720 520 S 1120 430, 1500 300" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="10" stroke-linecap="round"/>
+      <path d="M140 780 C 420 620, 520 710, 760 570 S 1180 500, 1540 360" fill="none" stroke="rgba(0,0,0,0.12)" stroke-width="8" stroke-linecap="round"/>
+    </g>
+    <text x="80" y="150" font-size="18" font-family="DM Sans, Arial, sans-serif" fill="rgba(255,255,255,0.65)" font-weight="700" letter-spacing="3">PROCESS</text>
+    <text x="80" y="220" font-size="120" font-family="DM Sans, Arial, sans-serif" fill="rgba(255,255,255,0.18)" font-weight="900">${step}</text>
+    <text x="80" y="310" font-size="46" font-family="DM Sans, Arial, sans-serif" fill="rgba(255,255,255,0.22)" font-weight="800">${t}</text>
+  </svg>`;
+      }
+
+      function makeProjectSvg({ title, cat, letter, clr, showLetter = true }) {
+        const t = escSvg(title);
+        const c = escSvg(cat);
+        const l = escSvg(letter || "P");
+        // 4:3 thumbnail box
+        return `
+  <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+    <defs>
+      <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="${clr}" stop-opacity="0.95"/>
+        <stop offset="1" stop-color="hsl(210,28%,97%)" stop-opacity="0.65"/>
+      </linearGradient>
+      <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="70"/>
+      </filter>
+      <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+        <path d="M60 0H0V60" fill="none" stroke="rgba(0,0,0,0.14)" stroke-width="1"/>
+      </pattern>
+    </defs>
+    <rect width="1200" height="900" fill="url(#g)"/>
+    <rect width="1200" height="900" fill="url(#grid)" opacity="0.18"/>
+    <circle cx="250" cy="220" r="220" fill="${clr}" opacity="0.28" filter="url(#blur)"/>
+    <circle cx="980" cy="720" r="280" fill="${clr}" opacity="0.18" filter="url(#blur)"/>
+    <g opacity="0.35">
+      <path d="M120 740 C 380 580, 470 670, 710 540 S 980 460, 1120 360" fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="12" stroke-linecap="round"/>
+    </g>
+    ${showLetter ? `<text x="600" y="520" text-anchor="middle" font-size="220" font-family="DM Sans, Arial, sans-serif" fill="rgba(255,255,255,0.22)" font-weight="900">${l}</text>` : ""}
+    <text x="600" y="630" text-anchor="middle" font-size="38" font-family="DM Sans, Arial, sans-serif" fill="rgba(255,255,255,0.65)" font-weight="800">${c}</text>
+    <text x="600" y="690" text-anchor="middle" font-size="30" font-family="DM Sans, Arial, sans-serif" fill="rgba(255,255,255,0.78)" font-weight="700">${t}</text>
+  </svg>`;
+      }
+
+      SLIDES[0].img = "images/image1.jpg";
+      SLIDES[1].img = "images/image3.jpg";
+      SLIDES[2].img = "images/image2.jpg";
+      SLIDES[3].img = "images/image4.jpg";
+      SLIDES[4].img = "images/image5.jpg";
+
+      const CLIENTS = [
+        "TechVentures",
+        "StyleBoutique",
+        "GreenEarth",
+        "SpiceGarden",
+        "BuildRight",
+        "CloudNine",
+        "SwiftLogistics",
+        "PureHealth",
+        "EduSmart",
+        "FinanceHub",
+        "TravelJoy",
+        "AutoPrime",
+        "FoodExpress",
+        "MediaWave",
+        "CraftWorks",
+      ];
+
+      const SERVICES = [
+        {
+          ic: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>`,
+          t: "Digital Strategy & Design",
+          d: "We build immersive brand identities using cutting-edge UI/UX principles, ensuring your digital presence is both stunning and high-converting.",
+        },
+        {
+          ic: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>`,
+          t: "Performance Management",
+          d: "Beyond maintenance, we provide continuous optimization, security hardening, and feature evolution to keep you ahead of the competition.",
+        },
+        {
+          ic: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>`,
+          t: "Cloud Infrastructure",
+          d: "Managed cloud hosting, secure domain management, and enterprise-grade DNS solutions tailored for global scalability and reliability.",
+        },
+      ];
+      const SERVICES_FULL = [
+        {
+          ic: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>`,
+          t: "Digital Strategy & Design",
+          d: "We architect high-performance digital identities. By leveraging modern UX principles and the latest frontend technologies, we create immersive experiences that drive measurable business outcomes.",
+          f: ["UX Research", "Responsive Architecture", "Headless CMS"],
+        },
+        {
+          ic: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>`,
+          t: "Experience Engineering",
+          d: "Combining behavioral data with creative intuition, we engineer interfaces that minimize friction. Our focus is on intuitive navigation and high-conversion user journeys.",
+          f: ["Interaction Design", "Prototyping", "Usability Testing"],
+        },
+        {
+          ic: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
+          t: "Managed Performance",
+          d: "Your platform is a living asset. we provide continuous performance monitoring, security hardening, and technical evolution to ensure your digital window remains world-class.",
+          f: ["SRE Support", "Security Audits", "CI/CD Integration"],
+        },
+        {
+          ic: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>`,
+          t: "Infrastructure & Cloud",
+          d: "Enterprise-grade cloud solutions and secure domain management. We ensure your digital assets are hosted on resilient, high-availability infrastructure with global reach.",
+          f: ["Cloud Hosting", "Managed DNS", "SSL/TLS Security"],
+        },
+        {
+          ic: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
+          t: "Full-Stack Engineering",
+          d: "Custom web applications built with React, Next.js, and Node.js. We build scalable, API-first solutions designed to power complex business operations.",
+          f: ["Next.js Apps", "API Integration", "Database Design"],
+        },
+        {
+          ic: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`,
+          t: "Progressive Web Apps",
+          d: "Mobile-first solutions that work offline and feel like native apps. We ensure a seamless experience across all devices and network conditions.",
+          f: ["PWA Development", "Offline Support", "Speed Optimization"],
+        },
+        {
+          ic: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>`,
+          t: "Unified Commerce",
+          d: "Scalable e-commerce ecosystems that integrate with your ERP and marketing tools. From headless commerce to custom payment flows.",
+          f: ["Headless Commerce", "Payment Gateways", "ERP Integration"],
+        },
+        {
+          ic: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
+          t: "Growth & SEO",
+          d: "Data-driven search optimization and analytics. We focus on organic visibility and technical SEO to drive high-intent traffic and maximize ROI.",
+          f: ["Technical SEO", "Content Strategy", "Data Analytics"],
+        },
+      ];
+      const STATS = [
+        { n: 700, s: "+", l: "Projects Delivered", d: "Across 20+ industries" },
+        { n: 500, s: "+", l: "Happy Clients", d: "Pan-India presence" },
+        { n: 5, s: "+", l: "Years Experience", d: "In web solutions" },
+        { n: 100, s: "%", l: "Client Satisfaction", d: "Quality guaranteed" },
+      ];
+      const ABOUT_STATS = [
+        { n: "700+", l: "Projects Completed" },
+        { n: "500+", l: "Happy Clients" },
+        { n: "5+", l: "Years Experience" },
+        { n: "100%", l: "Client Satisfaction" },
+      ];
+      const VALUES = [
+        {
+          i: "images/client.jpg",
+          t: "Client-Centric",
+          d: "We put our clients first, understanding their unique needs and delivering tailored solutions.",
+        },
+        {
+          i: "images/quality.png",
+          t: "Quality First",
+          d: "Every project we deliver meets the highest standards of quality and performance.",
+        },
+        {
+          i: "images/innovation.jpg",
+          t: "Innovation",
+          d: "We stay ahead with the latest technologies and creative approaches.",
+        },
+        {
+          i: "images/result.png",
+          t: "Results Driven",
+          d: "Our focus is on delivering measurable results that grow your business.",
+        },
+      ];
+      const REASONS = [
+        {
+          ic: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>`,
+          t: "Design Excellence",
+          d: "We prioritize conversion-centric design that balances aesthetic beauty with functional precision.",
+        },
+        {
+          ic: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+          t: "Consultative Approach",
+          d: "We act as partners, not just vendors, ensuring your digital strategy aligns with your long-term KPIs.",
+        },
+        {
+          ic: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>`,
+          t: "Scalability & Performance",
+          d: "Our architecture is built for speed and growth, ensuring your platform scales seamlessly as you do.",
+        },
+        {
+          ic: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`,
+          t: "User-Centric UX",
+          d: "Every interaction is mapped to the user journey, minimizing friction and maximizing engagement.",
+        },
+        {
+          ic: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
+          t: "Innovation-First",
+          d: "We leverage AI, cloud-native tech, and modern frameworks to keep your brand at the industry's edge.",
+        },
+        {
+          ic: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>`,
+          t: "SEO & Growth focus",
+          d: "Built-in search visibility and analytics integration to drive organic traffic and measurable ROI.",
+        },
+      ];
+      const PROJECTS = [
+        {
+          t: "Agrofields Ecosystem",
+          cat: "FinTech",
+          tech: ["React", "Node.js", "AWS"],
+          clr: "hsl(218, 92%, 50%)",
+          desc: "A data-driven agricultural management platform with real-time analytics and IoT integration.",
+          fullDesc:
+            "Agrofields is a comprehensive digital transformation project designed for the modern agricultural sector. We built a high-performance dashboard that aggregates real-time data from IoT sensors placed in fields, providing farmers with actionable insights on soil health, crop growth, and weather patterns.",
+          letter: "A",
+          img: "images/image1.jpg",
+          gallery: ["images/image1.jpg", "images/image2.jpg"],
+        },
+        {
+          t: "Alcatron Enterprise",
+          cat: "Business",
+          tech: ["Next.js", "GraphQL"],
+          clr: "hsl(218, 80%, 40%)",
+          desc: "High-performance corporate infrastructure for seamless B2B transactions and global networking.",
+          fullDesc:
+            "The Alcatron project focused on modernizing a legacy corporate identity. We developed a Next.js-powered portal that streamlines B2B communication and transaction tracking. The integration of GraphQL allows for efficient data fetching, reducing page load times by 40%.",
+          letter: "A",
+          img: "images/image2.jpg",
+          gallery: ["images/image2.jpg"],
+        },
+        {
+          t: "Andromeda SaaS",
+          cat: "Product Design",
+          tech: ["Figma", "React"],
+          clr: "hsl(32, 62%, 36%)",
+          desc: "A scalable SaaS landing experience optimized for conversion and user engagement.",
+          fullDesc:
+            "Andromeda is a high-converting landing page built for a rapidly growing SaaS startup. We focused on conversion-centric design, using A/B tested layouts and persuasive copywriting. The project included a complete UI kit designed in Figma.",
+          letter: "A",
+          img: "images/image3.jpg",
+          gallery: ["images/image3.jpg"],
+        },
+        {
+          t: "Clubber Commerce",
+          cat: "E-Commerce",
+          tech: ["Headless Shopify", "Liquid"],
+          clr: "hsl(26, 100%, 54%)",
+          desc: "Next-gen shopping experience with mobile-first UI and integrated AI-driven product recommendations.",
+          fullDesc:
+            "For Clubber, we implemented a headless Shopify architecture to decouple the frontend from the backend. This allowed us to build a completely custom, app-like experience for mobile users while leveraging Shopify's robust engine.",
+          letter: "C",
+          img: "images/image4.jpg",
+          gallery: ["images/image4.jpg", "images/image5.jpg"],
+        },
+        {
+          t: "Medical Doctor Plus",
+          cat: "Healthcare",
+          tech: ["React", "HIPAA Cloud"],
+          clr: "hsl(200, 90%, 45%)",
+          desc: "Secure, patient-centric portal with telemedicine capabilities and encrypted record management.",
+          fullDesc:
+            "Medical Doctor Plus is a HIPAA-compliant portal designed for modern private practices. We integrated secure video conferencing, automated scheduling, and encrypted record management.",
+          letter: "M",
+          img: "images/image5.jpg",
+          gallery: ["images/image5.jpg"],
+        },
+        {
+          t: "Santa Cecilia Real Estate",
+          cat: "Real Estate",
+          tech: ["React", "Google Maps API"],
+          clr: "hsl(32, 71%, 45%)",
+          desc: "Interactive real estate portal with virtual tours and real-time availability tracking.",
+          fullDesc:
+            "This PropTech project transformed how buyers interact with subdivision properties. We integrated Google Maps API for interactive lot selection and 360-degree virtual tours.",
+          letter: "S",
+          img: "images/image1.jpg",
+          gallery: ["images/image1.jpg"],
+        },
+        {
+          t: "Global Logistics",
+          cat: "Business",
+          tech: ["Vue.js", "Go", "Docker"],
+          clr: "hsl(220, 15%, 20%)",
+          desc: "End-to-end supply chain management with real-time asset tracking and fleet optimization.",
+          fullDesc:
+            "A massive logistical platform built to handle global shipping operations. Features include AI-driven route optimization and real-time container tracking via satellite data.",
+          letter: "G",
+          img: "images/image2.jpg",
+          gallery: ["images/image2.jpg"],
+        },
+        {
+          t: "Style Boutique",
+          cat: "E-Commerce",
+          tech: ["Shopify", "Custom Theme"],
+          clr: "hsl(26, 95%, 55%)",
+          desc: "A luxury fashion destination with high-speed browsing and seamless checkout.",
+          fullDesc:
+            "Style Boutique required a visual-first approach. We built a custom Shopify theme that prioritizes high-resolution imagery without sacrificing performance.",
+          letter: "S",
+          img: "images/image3.jpg",
+          gallery: ["images/image3.jpg"],
+        },
+        {
+          t: "Creative Portfolio",
+          cat: "Portfolio",
+          tech: ["Three.js", "React"],
+          clr: "hsl(32, 62%, 36%)",
+          desc: "An immersive 3D portfolio for a leading digital artist and designer.",
+          fullDesc:
+            "This project pushes the boundaries of web graphics. We used Three.js to create a navigable 3D gallery that showcases the artist's work in an interactive environment.",
+          letter: "C",
+          img: "images/image4.jpg",
+          gallery: ["images/image4.jpg"],
+        },
+        {
+          t: "SaaS Landing Page",
+          cat: "Landing Page",
+          tech: ["Tailwind", "Next.js"],
+          clr: "hsl(210, 90%, 48%)",
+          desc: "High-converting landing page with animated interactions and pricing logic.",
+          fullDesc:
+            "A clean, effective landing page designed for a project management SaaS. Focuses on clarity, speed, and a direct path to the sign-up flow.",
+          letter: "S",
+          img: "images/image5.jpg",
+          gallery: ["images/image5.jpg"],
+        },
+        {
+          t: "Dental Clinic",
+          cat: "Healthcare",
+          tech: ["WordPress", "PHP"],
+          clr: "hsl(195, 80%, 45%)",
+          desc: "Professional healthcare website with online booking and patient education resources.",
+          fullDesc:
+            "A comprehensive dental practice website featuring an easy-to-use booking system and a rich library of patient resources and treatment information.",
+          letter: "D",
+          img: "images/image1.jpg",
+          gallery: ["images/image1.jpg"],
+        },
+        {
+          t: "EduSmart Platform",
+          cat: "Education",
+          tech: ["React", "Firebase"],
+          clr: "hsl(26, 100%, 50%)",
+          desc: "Interactive learning management system for schools and private tutors.",
+          fullDesc:
+            "EduSmart provides a centralized platform for course delivery, student tracking, and parent-teacher communication. Features real-time quiz results and progress reports.",
+          letter: "E",
+          img: "images/image2.jpg",
+          gallery: ["images/image2.jpg"],
+        },
+        {
+          t: "LegalShield",
+          cat: "Legal",
+          tech: ["Next.js", "CMS"],
+          clr: "hsl(220, 12%, 18%)",
+          desc: "Trusted legal firm website with secure document portal and appointment system.",
+          fullDesc:
+            "LegalShield combines professional aesthetics with secure functionality. It features a private document sharing portal for clients and integrated billing.",
+          letter: "L",
+          img: "images/image3.jpg",
+          gallery: ["images/image3.jpg"],
+        },
+        {
+          t: "Luxury Watches",
+          cat: "E-Commerce",
+          tech: ["Magento", "PHP"],
+          clr: "hsl(32, 60%, 35%)",
+          desc: "Sophisticated e-commerce experience for a luxury timepiece brand.",
+          fullDesc:
+            "A high-end shopping experience featuring zoom-in functionality, historical timelines for each piece, and a secure high-value checkout process.",
+          letter: "L",
+          img: "images/image4.jpg",
+          gallery: ["images/image4.jpg"],
+        },
+        {
+          t: "Tech Ventures",
+          cat: "Business",
+          tech: ["React", "Cloudflare"],
+          clr: "hsl(218, 90%, 52%)",
+          desc: "Investor relations portal and venture capital landing page.",
+          fullDesc:
+            "A professional site for a VC firm, showcasing their portfolio companies and providing a secure portal for limited partners.",
+          letter: "T",
+          img: "images/image5.jpg",
+          gallery: ["images/image5.jpg"],
+        },
+      ];
+      PROJECTS.forEach((p) => {
+        if (!p.img) {
+          p.img = svgToDataURI(
+            makeProjectSvg({
+              title: p.t,
+              cat: p.cat,
+              letter: p.letter,
+              clr: p.clr,
+            }),
+          );
+        }
+      });
+
+      function makeWebsitePlaceholderSvg({ title, cat, clr, variant = 1 }) {
+        const t = escSvg(title);
+        const c = escSvg(cat);
+        const heroW = variant === 2 ? 360 : variant === 3 ? 320 : 420;
+        const sideW = variant === 2 ? 250 : 220;
+        const sideX = variant === 3 ? 860 : 820;
+        const heroX = variant === 2 ? 90 : 70;
+        return `
+  <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+    <defs>
+      <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="${clr}" stop-opacity="0.95"/>
+        <stop offset="1" stop-color="hsl(210,28%,97%)" stop-opacity="0.72"/>
+      </linearGradient>
+      <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="55"/>
+      </filter>
+      <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+        <path d="M60 0H0V60" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+      </pattern>
+    </defs>
+    <rect width="1200" height="900" rx="36" fill="url(#g)"/>
+    <rect width="1200" height="900" rx="36" fill="url(#grid)" opacity="0.18"/>
+    <circle cx="180" cy="160" r="180" fill="${clr}" opacity="0.22" filter="url(#blur)"/>
+    <circle cx="1040" cy="760" r="240" fill="${clr}" opacity="0.18" filter="url(#blur)"/>
+    <rect x="50" y="42" width="1100" height="816" rx="28" fill="rgba(255,255,255,0.82)" stroke="rgba(255,255,255,0.55)"/>
+    <rect x="72" y="64" width="1056" height="52" rx="18" fill="rgba(255,255,255,0.9)" stroke="rgba(0,0,0,0.08)"/>
+    <rect x="96" y="82" width="110" height="14" rx="7" fill="${clr}" opacity="0.9"/>
+    <rect x="842" y="80" width="60" height="12" rx="6" fill="rgba(0,0,0,0.16)"/>
+    <rect x="916" y="80" width="60" height="12" rx="6" fill="rgba(0,0,0,0.12)"/>
+    <rect x="990" y="80" width="88" height="12" rx="6" fill="rgba(0,0,0,0.12)"/>
+    <text x="96" y="150" font-size="18" font-family="DM Sans, Arial, sans-serif" fill="${clr}" font-weight="800" letter-spacing="2.5">${c}</text>
+    <text x="96" y="214" font-size="54" font-family="DM Sans, Arial, sans-serif" fill="rgba(15,23,42,0.92)" font-weight="900">${t}</text>
+    <text x="96" y="258" font-size="24" font-family="DM Sans, Arial, sans-serif" fill="rgba(15,23,42,0.56)" font-weight="500">Image spaces ready for your final assets</text>
+    <rect x="${heroX}" y="312" width="${heroW}" height="306" rx="26" fill="rgba(255,255,255,0.84)" stroke="rgba(0,0,0,0.08)" stroke-dasharray="10 8"/>
+    <rect x="${heroX + 22}" y="334" width="${heroW - 44}" height="262" rx="20" fill="rgba(255,255,255,0.58)" stroke="rgba(0,0,0,0.10)" stroke-dasharray="8 7"/>
+    <path d="M${heroX + 82} 466l56-58 38 40 36-24 52 42" fill="none" stroke="${clr}" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+    <circle cx="${heroX + heroW - 88}" cy="388" r="18" fill="${clr}" opacity="0.18"/>
+    <text x="${heroX + heroW / 2}" y="576" text-anchor="middle" font-size="26" font-family="DM Sans, Arial, sans-serif" fill="rgba(15,23,42,0.62)" font-weight="700">Main hero image</text>
+    <rect x="${sideX}" y="318" width="${sideW}" height="150" rx="22" fill="rgba(255,255,255,0.8)" stroke="rgba(0,0,0,0.08)" stroke-dasharray="10 8"/>
+    <rect x="${sideX + 18}" y="336" width="${sideW - 36}" height="114" rx="18" fill="rgba(255,255,255,0.55)" stroke="rgba(0,0,0,0.10)" stroke-dasharray="8 7"/>
+    <text x="${sideX + sideW / 2}" y="402" text-anchor="middle" font-size="20" font-family="DM Sans, Arial, sans-serif" fill="rgba(15,23,42,0.58)" font-weight="700">Supporting image</text>
+    <rect x="${sideX}" y="490" width="${sideW}" height="128" rx="22" fill="rgba(255,255,255,0.8)" stroke="rgba(0,0,0,0.08)" stroke-dasharray="10 8"/>
+    <rect x="${sideX + 18}" y="508" width="${sideW - 36}" height="92" rx="18" fill="rgba(255,255,255,0.55)" stroke="rgba(0,0,0,0.10)" stroke-dasharray="8 7"/>
+    <text x="${sideX + sideW / 2}" y="562" text-anchor="middle" font-size="20" font-family="DM Sans, Arial, sans-serif" fill="rgba(15,23,42,0.58)" font-weight="700">Product / team image</text>
+    <rect x="96" y="666" width="168" height="54" rx="27" fill="${clr}" opacity="0.95"/>
+    <rect x="280" y="666" width="168" height="54" rx="27" fill="rgba(0,0,0,0.06)"/>
+    <rect x="464" y="666" width="168" height="54" rx="27" fill="rgba(0,0,0,0.06)"/>
+    <text x="180" y="700" text-anchor="middle" font-size="20" font-family="DM Sans, Arial, sans-serif" fill="#fff" font-weight="800">Add Image</text>
+    <text x="364" y="700" text-anchor="middle" font-size="20" font-family="DM Sans, Arial, sans-serif" fill="rgba(15,23,42,0.7)" font-weight="700">Banner</text>
+    <text x="548" y="700" text-anchor="middle" font-size="20" font-family="DM Sans, Arial, sans-serif" fill="rgba(15,23,42,0.7)" font-weight="700">Gallery</text>
+  </svg>`;
+      }
+
+      const designThumb = (title, cat, clr, variant = 1) =>
+        svgToDataURI(makeWebsitePlaceholderSvg({ title, cat, clr, variant }));
+      const webGallery = (...imgs) => imgs;
+
+      const DESIGNS = [
+        {
+          t: "Spice Route Restaurant",
+          cat: "Restaurant",
+          desc: "A warm, high-end restaurant website with menu browsing, table booking, and location highlights.",
+          fullDesc:
+            "Spice Route Restaurant presents an inviting food-first experience with seasonal menu storytelling, elegant reservations flow, chef specials, and a strong focus on atmosphere. The slideshow uses the restaurant image set from the website folder so every slide feels like a real brand journey.",
+          clr: "hsl(18, 92%, 54%)",
+          letter: "S",
+          img: "images/website/web1-1.png",
+          gallery: webGallery(
+            "images/website/web1-1.png",
+            "images/website/web1-2.png",
+            "images/website/web1-3.png",
+            "images/website/web1-4.png",
+          ),
+        },
+        {
+          t: "CityTrust Bank",
+          cat: "Banking",
+          desc: "A secure banking website concept with trust signals, product information, and branch guidance.",
+          fullDesc:
+            "CityTrust Bank is designed to feel dependable and modern, with a polished homepage, clear product cards, and reassuring service messaging. The gallery uses the bank image collection from the website folder so the modal opens into a true slideshow with multiple screens.",
+          clr: "hsl(214, 84%, 45%)",
+          letter: "C",
+          img: "images/website/web2-1.png",
+          gallery: webGallery(
+            "images/website/web2-1.png",
+            "images/website/web2-2.png",
+            "images/website/web2-3.png",
+            "images/website/web2-4.png",
+            "images/website/web2-5.png",
+          ),
+        },
+        {
+          t: "SkillNest Academy",
+          cat: "Academy",
+          desc: "A digital course academy with class listings, instructor highlights, and enrollment prompts.",
+          fullDesc:
+            "SkillNest Academy is built as a content-rich education brand with course discovery, mentor profiles, and easy enrollment cues. The slideshow uses the academy image set from the website folder to show a full learning experience as the modal moves from screen to screen.",
+          clr: "hsl(32, 70%, 44%)",
+          letter: "K",
+          img: "images/website/web3-1.png",
+          gallery: webGallery(
+            "images/website/web3-1.png",
+            "images/website/web3-2.png",
+            "images/website/web3-3.png",
+            "images/website/web3-4.png",
+          ),
+        },
+        {
+          t: "Aurelia Jewellery",
+          cat: "Jewellery",
+          desc: "Elegant jewellery showcase with premium product visuals, collections, and gifting experiences.",
+          fullDesc:
+            "Aurelia Jewellery is styled for luxury, featuring refined product presentation, collection pages, and a premium visual language. The gallery uses the jewellery images from the website folder, so the opening modal behaves like a smooth product slideshow.",
+          clr: "hsl(280, 42%, 42%)",
+          letter: "A",
+          img: "images/website/web4-1.png",
+          gallery: webGallery(
+            "images/website/web4-1.png",
+            "images/website/web4-2.png",
+            "images/website/web4-3.png",
+            "images/website/web4-4.png",
+          ),
+        },
+        {
+          t: "ShopNova Commerce",
+          cat: "E-Commerce",
+          desc: "A realistic e-commerce storefront with featured products, offers, and conversion-focused layout.",
+          fullDesc:
+            "ShopNova Commerce is a practical e-commerce concept for a modern online store. It includes a hero banner, featured collections, social proof, and checkout-oriented design, with a generated image gallery that demonstrates the site as a complete browsing flow.",
+          clr: "hsl(26, 100%, 54%)",
+          img: designThumb("ShopNova Commerce", "E-Commerce", "hsl(26, 100%, 54%)", 1),
+          gallery: webGallery(
+            designThumb("ShopNova Home", "E-Commerce", "hsl(26, 100%, 54%)", 2),
+            designThumb("ShopNova Collection", "E-Commerce", "hsl(24, 90%, 48%)", 3),
+            designThumb("ShopNova Checkout", "E-Commerce", "hsl(214, 84%, 45%)", 1),
+          ),
+        },
+        {
+          t: "ModeMart Studio",
+          cat: "E-Commerce",
+          desc: "A second realistic store concept tailored for fashion, accessories, and high-intent shopping.",
+          fullDesc:
+            "ModeMart Studio leans into a sharper retail identity with product cards, trend-led sections, and polished merchandising. Its slideshow uses generated visuals to show the homepage, category browse, and product storytelling stages.",
+          clr: "hsl(214, 84%, 45%)",
+          img: designThumb("ModeMart Studio", "E-Commerce", "hsl(214, 84%, 45%)", 1),
+          gallery: webGallery(
+            designThumb("ModeMart Home", "E-Commerce", "hsl(214, 84%, 45%)", 2),
+            designThumb("ModeMart Shop", "E-Commerce", "hsl(32, 70%, 44%)", 3),
+            designThumb("ModeMart Basket", "E-Commerce", "hsl(280, 42%, 42%)", 1),
+          ),
+        },
+        {
+          t: "NorthPeak Consulting",
+          cat: "Business",
+          desc: "A polished business website for a consulting team with service clarity and lead generation focus.",
+          fullDesc:
+            "NorthPeak Consulting presents a credible B2B presence with service positioning, client logos, and an easy contact path. The slideshow uses generated slides that feel like a professional corporate pitch deck translated into web design.",
+          clr: "hsl(220, 15%, 20%)",
+          img: designThumb("NorthPeak Consulting", "Business", "hsl(220, 15%, 20%)", 1),
+          gallery: webGallery(
+            designThumb("NorthPeak Strategy", "Business", "hsl(220, 15%, 20%)", 2),
+            designThumb("NorthPeak Services", "Business", "hsl(214, 84%, 45%)", 3),
+            designThumb("NorthPeak Growth", "Business", "hsl(26, 100%, 54%)", 1),
+          ),
+        },
+        {
+          t: "Apex Growth Group",
+          cat: "Business",
+          desc: "A second corporate website concept with investor confidence, services, and team positioning.",
+          fullDesc:
+            "Apex Growth Group is crafted as a clean, high-trust business website for a consultancy or agency. It leans on strong hierarchy, clear service breakdowns, and a stable visual language that works well in a slideshow or a pitch environment.",
+          clr: "hsl(32, 70%, 44%)",
+          img: designThumb("Apex Growth Group", "Business", "hsl(32, 70%, 44%)", 1),
+          gallery: webGallery(
+            designThumb("Apex Growth Home", "Business", "hsl(32, 70%, 44%)", 2),
+            designThumb("Apex Growth Team", "Business", "hsl(218, 90%, 52%)", 3),
+            designThumb("Apex Growth Contact", "Business", "hsl(280, 42%, 42%)", 1),
+          ),
+        },
+      ];
+      const DES_CATS = [
+        "All",
+        "Restaurant",
+        "Banking",
+        "Academy",
+        "Jewellery",
+        "E-Commerce",
+        "Business",
+      ];
+      const PROCESS = [
+        {
+          i: "images/research.jpg",
+          t: "Research",
+          d: "Understanding your business, goals and target audience to build the perfect strategy.",
+        },
+        {
+          i: "images/download.jpg",
+          t: "Design",
+          d: "Creating stunning, unique designs based on strong elements and optimum information.",
+        },
+        {
+          i: "images/development.png",
+          t: "Development",
+          d: "Building high-performance, accessible, and secure digital solutions with modern tech.",
+        },
+        {    
+          i: "images/launch.jpg",
+          t: "Launch",
+          d: "Comprehensive testing and deployment to ensure a smooth transition to the global market.",
+        },
+      ];
+      const TECH = [
+        { n: "HTML5", c: "var(--primary)" },
+        { n: "CSS3", c: "var(--accent)" },
+        { n: "JavaScript", c: "var(--primary)" },
+        { n: "React", c: "var(--accent)" },
+        { n: "Node.js", c: "var(--primary)" },
+        { n: "WordPress", c: "var(--accent)" },
+        { n: "PHP", c: "var(--primary)" },
+        { n: "MySQL", c: "var(--accent)" },
+        { n: "MongoDB", c: "var(--primary)" },
+        { n: "Firebase", c: "var(--accent)" },
+        { n: "Tailwind", c: "var(--primary)" },
+        { n: "Figma", c: "var(--accent)" },
+      ];
+      const TESTI = [
+        {
+          n: "Rajesh Kumar",
+          r: "CEO, TechVentures India",
+          t: "Team Infosoft delivered an outstanding e-commerce website that increased our online sales by 300%. Their attention to detail and understanding of our business needs was exceptional.",
+          av: "RK",
+        },
+        {
+          n: "Priya Sharma",
+          r: "Founder, StyleBoutique",
+          t: "The website they designed for us is absolutely stunning. Our customers love the seamless shopping experience. The team was professional, responsive, and delivered on time.",
+          av: "PS",
+        },
+        {
+          n: "Amit Patel",
+          r: "Director, GreenEarth Solutions",
+          t: "Working with Team Infosoft was a game-changer for our online presence. They transformed our outdated website into a modern, fast-loading platform that ranks well on Google.",
+          av: "AP",
+        },
+        {
+          n: "Sneha Reddy",
+          r: "Owner, Spice Garden Restaurant",
+          t: "Our restaurant website with online ordering has brought in so many new customers. The team understood exactly what we needed and exceeded our expectations.",
+          av: "SR",
+        },
+        {
+          n: "Vikram Singh",
+          r: "MD, BuildRight Properties",
+          t: "The real estate portal they built for us is feature-rich and user-friendly. Property listings, virtual tours, and lead generation — they implemented everything perfectly.",
+          av: "VS",
+        },
+      ];
+      const FAQS = [
+        {
+          q: "How long does it take to build a website?",
+          a: "Depending on the complexity, a standard website takes 7–15 business days. E-commerce and custom web applications may take 3–6 weeks. We provide a detailed timeline during our initial consultation.",
+        },
+        {
+          q: "Do you provide website hosting and domain registration?",
+          a: "Yes! We offer complete domain registration services (.com, .in, .org, .co.in) and reliable website hosting with 99.9% uptime guarantee. Our hosting packages come with SSL certificates and daily backups.",
+        },
+        {
+          q: "What technologies do you use for web development?",
+          a: "We work with modern technologies including React, Node.js, WordPress, PHP, MySQL, MongoDB, and more. We choose the best technology stack based on your specific project requirements.",
+        },
+        {
+          q: "Do you offer post-launch support and maintenance?",
+          a: "Absolutely! All our packages include post-launch support. We offer maintenance packages ranging from 3 months to 1 year, covering updates, security patches, content changes, and performance optimization.",
+        },
+        {
+          q: "How much does a website cost?",
+          a: "Our packages start at ₹4,999 for a basic 5-page website. E-commerce websites and custom web applications are priced based on features and complexity. Contact us for a free quote.",
+        },
+        {
+          q: "Will my website be mobile-friendly?",
+          a: "Yes, all our websites are fully responsive and optimized for mobile devices, tablets, and desktops. We follow mobile-first design principles to ensure the best experience across all screen sizes.",
+        },
+      ];
+      const PACKAGES = [
+        {
+          n: "Core Growth",
+          p: "Custom Quote",
+          d: "Essential digital presence for startups and small enterprises.",
+          f: [
+            "Full Stack Development",
+            "Mobile-Responsive UI",
+            "5 Managed Emails",
+            "SEO Foundation",
+            "SSL & Security Hardening",
+            "Priority Cloud Support",
+          ],
+          pop: false,
+        },
+        {
+          n: "Premium Scaling",
+          p: "Custom Quote",
+          d: "Advanced features for growing brands ready for the global market.",
+          f: [
+            "Next.js Performance",
+            "Custom UX/UI Research",
+            "10 Managed Emails",
+            "Advanced SEO Strategy",
+            "Database Optimization",
+            "Dedicated Account Manager",
+          ],
+          pop: true,
+        },
+        {
+          n: "Enterprise Digital",
+          p: "Custom Quote",
+          d: "Full-scale digital transformation for established corporations.",
+          f: [
+            "Cloud-Native Architecture",
+            "AI Integration",
+            "Unlimited Scaling",
+            "Custom Security Audits",
+            "24/7 Managed SRE Support",
+            "Full Feature Evolution",
+          ],
+          pop: false,
+        },
+      ];
+      const FOOTER_HTML = (yr) => `
+<div style="background:linear-gradient(140deg,hsl(216,38%,10%),hsl(220,32%,15%));padding:4.5rem 0 0;">
+<div class="container">
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <div style="margin-bottom:1rem;">
+        <img src="images/logo.png" alt="Team Infosoft" style="height: 50px;">
+      </div>
+      <p>Your trusted partner for web designing, development, and digital solutions across India.</p>
+    </div>
+    <div class="foot-col"><h4>Quick Links</h4><div class="foot-links"><a href="#" data-page="home">Home</a><a href="#" data-page="about">About Us</a><a href="#" data-page="services">Services</a><a href="#" data-page="contact">Contact</a></div></div>
+    <div class="foot-col"><h4>Services</h4><div class="foot-links"><span>Web Designing</span><span>UI/UX Design</span><span>Domain Registration</span><span>Website Maintenance</span></div></div>
+    <div class="foot-col"><h4>Contact</h4><div class="foot-ci"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,14 22,4"/></svg>teaminfosoftindia@gmail.com</div><div class="foot-ci"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.58 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 5.97 5.97l1.46-1.46a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+91 462 4001400 | +91 9788 125 125</div><div class="foot-ci"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>#28, Nisha Complex, Palayamkottai, Tirunelveli – 627 002</div></div>
+  </div>
+  <div style="height:1px;background:rgba(255,255,255,.07);margin:0 0 1.5rem;"></div>
+  <div class="foot-bottom">
+    <div class="foot-copy">© ${yr} Team Infosoft. All rights reserved.</div>
+    <div class="foot-legal">
+      <a href="#" data-page="terms">Terms & Conditions</a>
+      <a href="#" data-page="privacy">Privacy Policy</a>
+      <a href="#" data-page="refund">Cancellation & Refund</a>
+      <a href="#" data-page="disclaimer">Disclaimer</a>
+    </div>
+  </div>
+</div>
+</div>`;
+
+      const LEGAL = {
+        terms: {
+          title: "Terms & Conditions",
+          eff: "Effective Date: January 1, 2024",
+          sections: [
+            {
+              h: "1. Acceptance of Terms",
+              b: "By accessing and using Team Infosoft's website and services, you accept and agree to be bound by the terms and conditions of this agreement. If you do not agree to these terms, please do not use our services.",
+            },
+            {
+              h: "2. Services",
+              b: "Team Infosoft provides web design, web development, domain registration, SEO, and related digital services. All services are subject to the terms outlined herein and any additional agreements signed between the parties.",
+            },
+            {
+              h: "3. Payment Terms",
+              b: "Payment for services is due as outlined in the project agreement. A 50% advance is typically required before project commencement. Remaining payment is due upon project completion. Late payments may incur interest charges.",
+            },
+            {
+              h: "4. Intellectual Property",
+              b: "Upon full payment, clients receive ownership of the final deliverables. Team Infosoft retains rights to display the work in its portfolio. Third-party assets (fonts, stock images, plugins) are subject to their respective licenses.",
+            },
+            {
+              h: "5. Limitation of Liability",
+              b: "Team Infosoft shall not be liable for indirect, incidental, or consequential damages arising from the use of our services. Our total liability is limited to the amount paid for the specific service in question.",
+            },
+            {
+              h: "6. Contact",
+              b: "For questions regarding these Terms, please contact us at teaminfosoftindia@gmail.com.",
+            },
+          ],
+        },
+        privacy: {
+          title: "Privacy Policy",
+          eff: "Effective Date: January 1, 2024",
+          sections: [
+            {
+              h: "1. Information We Collect",
+              b: "We collect information you provide directly, including name, email, phone number, and project details. We also automatically collect usage data, browser type, and IP address when you visit our website.",
+            },
+            {
+              h: "2. How We Use Your Information",
+              b: "We use your information to provide and improve our services, communicate with you about projects, send promotional materials (with your consent), and comply with legal obligations.",
+            },
+            {
+              h: "3. Information Sharing",
+              b: "We do not sell or share your personal information with third parties for their marketing purposes. We may share data with service providers who assist in our operations, subject to confidentiality agreements.",
+            },
+            {
+              h: "4. Data Security",
+              b: "We implement industry-standard security measures including SSL encryption, secure servers, and regular security audits to protect your personal information from unauthorized access or disclosure.",
+            },
+            {
+              h: "5. Your Rights",
+              b: "You have the right to access, correct, or delete your personal information at any time. You may opt out of marketing communications by contacting us or using the unsubscribe link in emails.",
+            },
+            {
+              h: "6. Contact Us",
+              b: "For privacy-related inquiries, contact us at teaminfosoftindia@gmail.com or write to us at #28, Nisha Complex, (OPP City Union Bank), Murugankurichi, Tiruchendur Road, Palayamkottai, Tirunelveli – 627 002.",
+            },
+          ],
+        },
+        refund: {
+          title: "Cancellation & Refund Policy",
+          eff: "Effective Date: January 1, 2024",
+          sections: [
+            {
+              h: "1. Project Cancellation by Client",
+              b: "Clients may cancel a project at any time by providing written notice. Cancellation fees apply based on the stage of work completed. Work completed up to the cancellation point will be billed accordingly.",
+            },
+            {
+              h: "2. Refund Eligibility",
+              b: "Refunds are considered on a case-by-case basis. If Team Infosoft has not commenced work, a full refund of the advance may be issued. Once work has begun, refunds are proportional to incomplete work only.",
+            },
+            {
+              h: "3. Non-Refundable Items",
+              b: "Domain registration fees, third-party software licences, hosting charges, and any costs already incurred with third-party vendors are non-refundable once processed.",
+            },
+            {
+              h: "4. Project Disputes",
+              b: "In case of a dispute regarding deliverables, we first attempt resolution through discussion. If unresolved within 30 days, either party may seek mediation. All disputes are governed by the laws of India.",
+            },
+            {
+              h: "5. Refund Processing",
+              b: "Approved refunds are processed within 10–15 business days to the original payment method. Bank charges, if any, will be deducted from the refund amount.",
+            },
+            {
+              h: "6. Contact",
+              b: "For cancellation or refund requests, email teaminfosoftindia@gmail.com with your project details and reason for cancellation.",
+            },
+          ],
+        },
+        disclaimer: {
+          title: "Disclaimer",
+          eff: "Effective Date: January 1, 2024",
+          sections: [
+            {
+              h: "1. General Disclaimer",
+              b: "The information provided on this website is for general informational purposes only. Team Infosoft makes no representations or warranties of any kind, express or implied, about the completeness or accuracy of the information.",
+            },
+            {
+              h: "2. Professional Advice",
+              b: "Nothing on this website constitutes professional legal, financial, or business advice. You should seek independent professional advice before making any decisions based on information provided here.",
+            },
+            {
+              h: "3. Results Disclaimer",
+              b: "Case studies, testimonials, and examples of past work are not guarantees of future results. Individual results will vary based on many factors including effort, experience, and market conditions.",
+            },
+            {
+              h: "4. External Links",
+              b: "Our website may contain links to external websites. We have no control over the content or practices of these sites and accept no responsibility for them. Linking does not imply endorsement.",
+            },
+            {
+              h: "5. Technology Availability",
+              b: "We do not guarantee that our website or services will be available at all times. We reserve the right to modify, suspend, or discontinue any aspect of our services with or without notice.",
+            },
+            {
+              h: "6. Changes",
+              b: "We reserve the right to modify this disclaimer at any time. Continued use of our services after changes constitutes acceptance of the revised disclaimer.",
+            },
+          ],
+        },
+      };
+
+      // ============================================================
+      // LOADER
+      // ============================================================
+      (function () {
+        const blocks = document.querySelectorAll(".lb");
+        const brand = document.getElementById("loader-brand");
+        const name = document.getElementById("loader-name");
+        const logo = document.getElementById("loader-logo");
+        const barWrap = document.getElementById("loader-bar-wrap");
+        const bar = document.getElementById("loader-bar");
+        const tagline = document.getElementById("loader-tagline");
+        let progress = 0;
+
+        // Animate name in
+        setTimeout(() => {
+          if (logo) {
+            logo.style.transition = "opacity .6s ease, transform .6s ease";
+            logo.style.opacity = "1";
+            logo.style.transform = "translateY(0)";
+          }
+          name.style.transition = "opacity .6s ease, transform .6s ease";
+          name.style.opacity = "1";
+          name.style.transform = "translateY(0)";
+        }, 100);
+        setTimeout(() => {
+          barWrap.style.transition = "opacity .4s";
+          barWrap.style.opacity = "1";
+          tagline.style.transition = "opacity .4s .2s";
+          tagline.style.opacity = "1";
+        }, 500);
+
+        // Progress bar
+        const barInt = setInterval(() => {
+          progress = Math.min(progress + Math.random() * 12, 95);
+          bar.style.width = progress + "%";
+          if (progress >= 95) clearInterval(barInt);
+        }, 80);
+
+        // Exit
+        setTimeout(() => {
+          bar.style.width = "100%";
+          setTimeout(() => {
+            // Fade out brand
+            brand.style.transition = "opacity .5s";
+            brand.style.opacity = "0";
+            // Exit blocks — each goes a different direction
+            const exits = [
+              "translateX(-110%)",
+              "translateY(-110%)",
+              "translateX(110%)",
+              "translateX(-110%) translateY(110%)",
+              "translateY(110%)",
+              "translateX(110%) translateY(110%)",
+            ];
+            blocks.forEach((b, i) => {
+              b.style.transition = `transform 1s cubic-bezier(.76,0,.24,1) ${i * 0.1}s`;
+              b.style.transform = exits[i];
+            });
+            setTimeout(() => {
+              document.getElementById("loader").style.display = "none";
+              brand.style.display = "none";
+            }, 1400);
+          }, 300);
+        }, 2000);
+      })();
+
+      // ============================================================
+      // ROUTER
+      // ============================================================
+      const PAGES = [
+        "home",
+        "about",
+        "services",
+        "designs",
+        "packages",
+        "contact",
+        "terms",
+        "privacy",
+        "refund",
+        "disclaimer",
+      ];
+      let curPage = "home";
+      function nav(page) {
+        PAGES.forEach((p) => {
+          const el = document.getElementById("page-" + p);
+          if (el) el.style.display = p === page ? "block" : "none";
+        });
+        document.querySelectorAll(".nl,.ml").forEach((a) => {
+          const active = a.dataset.page === page;
+          a.classList.toggle("active", active);
+          const ind = a.querySelector(".nl-indicator");
+          if (ind) ind.style.transform = active ? "scaleX(1)" : "scaleX(0)";
+        });
+        // Toggle on-home class so navbar text flips between black (home) and white (other pages)
+        document.getElementById("navbar").classList.toggle("on-home", page === "home");
+        curPage = page;
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        document.getElementById("mob-menu").classList.remove("open");
+        document.getElementById("hico-o").style.display = "";
+        document.getElementById("hico-c").style.display = "none";
+        setTimeout(initReveal, 80);
+        if (page === "designs") renderDesigns();
+      }
+
+      document.addEventListener("click", (e) => {
+        const el = e.target.closest("[data-page]");
+        if (el) {
+          e.preventDefault();
+          nav(el.dataset.page);
+        }
+      });
+
+      // ============================================================
+      // NAVBAR + SCROLL PROGRESS
+      // ============================================================
+      window.addEventListener("scroll", () => {
+        document
+          .getElementById("navbar")
+          .classList.toggle("scrolled", window.scrollY > 50);
+        const p =
+          window.scrollY /
+          (document.documentElement.scrollHeight - window.innerHeight);
+        document.getElementById("sp").style.width = p * 100 + "%";
+        const desSp = document.getElementById("des-sp");
+        if (desSp && curPage === "designs") desSp.style.width = p * 100 + "%";
+      });
+      document.getElementById("ham").addEventListener("click", () => {
+        const mm = document.getElementById("mob-menu");
+        const o = mm.classList.toggle("open");
+        document.getElementById("hico-o").style.display = o ? "none" : "";
+        document.getElementById("hico-c").style.display = o ? "" : "none";
+      });
+
+      // ============================================================
+      // HERO SLIDESHOW
+      // ============================================================
+      (function () {
+        let cur = 0;
+        const bg = document.getElementById("hero-bg-slides");
+        const txt = document.getElementById("hero-txt");
+        const dotsEl = document.getElementById("hero-dots");
+        const slideEls = [];
+        const dotEls = [];
+
+        SLIDES.forEach((s, i) => {
+          const d = document.createElement("div");
+          d.className = "hslide" + (i === 0 ? " active" : "");
+          const col = SLIDE_COLORS[i];
+          d.innerHTML = `
+      <div class="hslide-fallback" style="background:radial-gradient(ellipse at center,${col}25 0%,hsl(216,38%,8%) 70%);"></div>
+      <img class="hslide-img" src="${s.img || ""}" alt="${s.title}"/>
+    `;
+          bg.appendChild(d);
+          slideEls[i] = d;
+
+          const dot = document.createElement("button");
+          dot.className = "hdot" + (i === 0 ? " active" : "");
+          dot.onclick = () => goTo(i);
+          dotsEl.appendChild(dot);
+          dotEls[i] = dot;
+        });
+        function render() {
+          const s = SLIDES[cur];
+          const words = s.title.split(" ");
+          let titleHtml = s.title;
+          if (words.length > 1) {
+            const lastWord = words.pop();
+            const rest = words.join(" ");
+            titleHtml = `${rest} <span class="tg">${lastWord}</span>`;
+          }
+          txt.innerHTML = `<div class="hero-slide-text"><h1 class="hero-h1">${titleHtml}</h1><p class="hero-p">${s.sub}</p></div>`;
+        }
+        render();
+
+        function goTo(i) {
+          const prev = cur;
+          cur = (i + SLIDES.length) % SLIDES.length;
+
+          slideEls[prev].classList.remove("active");
+          slideEls[cur].classList.add("active");
+
+          dotEls[prev].classList.remove("active");
+          dotEls[cur].classList.add("active");
+
+          txt.innerHTML = "";
+          setTimeout(render, 80);
+        }
+        setInterval(() => goTo(cur + 1), 5500);
+      })();
+
+      // ============================================================
+      // MARQUEE
+      // ============================================================
+      (function () {
+        const mq1 = document.getElementById("mq1");
+        const mq2 = document.getElementById("mq2");
+        const triple = [...CLIENTS, ...CLIENTS, ...CLIENTS];
+        triple.forEach((c) => {
+          mq1.innerHTML += `<div class="mq-item"><span>${c}</span></div>`;
+        });
+        [...triple].reverse().forEach((c) => {
+          mq2.innerHTML += `<div class="mq-item"><span>${c}</span></div>`;
+        });
+      })();
+
+      // ============================================================
+      // SERVICES HOME
+      // ============================================================
+      (function () {
+        const g = document.getElementById("srv-grid-home");
+        if (!g) return;
+        SERVICES.forEach((s, i) => {
+          const d = document.createElement("div");
+          d.className = `srv-card rev scale`;
+          d.style.transitionDelay = `${i * 0.1}s`;
+          d.innerHTML = `<div class="srv-ic" style="color:var(--primary);margin-bottom:1.5rem;">${s.ic}</div><div class="srv-txt"><h3>${s.t}</h3><p>${s.d}</p></div>`;
+          d.addEventListener("mousemove", (e) => {
+            const r = d.getBoundingClientRect();
+            d.style.setProperty("--mx", `${e.clientX - r.left}px`);
+            d.style.setProperty("--my", `${e.clientY - r.top}px`);
+          });
+          g.appendChild(d);
+        });
+      })();
+
+      // ============================================================
+      // STATS
+      // ============================================================
+      (function () {
+        const g = document.getElementById("stats-g");
+        const p = document.getElementById("stats-parts");
+        if (!g) return;
+        for (let i = 0; i < 20; i++) {
+          const pt = document.createElement("div");
+          const color =
+            i % 2 === 0
+              ? "hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.4)"
+              : "hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.4)";
+          pt.style.cssText = `position:absolute;width:3px;height:3px;border-radius:50%;background:${color};left:${Math.random() * 100}%;top:${Math.random() * 100}%;animation:particleFl ${3 + Math.random() * 2}s ease-in-out ${Math.random() * 3}s infinite;`;
+          p.appendChild(pt);
+        }
+        const style = document.createElement("style");
+        style.textContent = `@keyframes particleFl{0%,100%{transform:translateY(0);opacity:0;}50%{transform:translateY(-35px);opacity:1;}}`;
+        document.head.appendChild(style);
+        STATS.forEach((s, i) => {
+          const d = document.createElement("div");
+          d.className = "stat-c rev up";
+          d.style.transitionDelay = `${i * 0.1}s`;
+          d.innerHTML = `<div class="stat-num tg" data-t="${s.n}" data-s="${s.s}">0${s.s}</div><div class="stat-lbl">${s.l}</div><div class="stat-sub">${s.d}</div>`;
+          g.appendChild(d);
+        });
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.querySelectorAll("[data-t]").forEach((el) => {
+                  const tgt = parseInt(el.dataset.t),
+                    suf = el.dataset.s;
+                  let start = null;
+                  const step = (ts) => {
+                    if (!start) start = ts;
+                    const pct = Math.min((ts - start) / 2000, 1);
+                    el.textContent = Math.floor(pct * tgt) + suf;
+                    if (pct < 1) requestAnimationFrame(step);
+                  };
+                  requestAnimationFrame(step);
+                });
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.3 },
+        );
+        io.observe(g);
+      })();
+
+      // ============================================================
+      // WHY / REASONS
+      // ============================================================
+      (function () {
+        const g = document.getElementById("reasons-g");
+        if (!g) return;
+        REASONS.forEach((r, i) => {
+          const d = document.createElement("div");
+          d.className = `reason rev up`;
+          d.style.transitionDelay = `${i * 0.1}s`;
+          d.innerHTML = `<div class="reason-ic">${r.ic}</div><div><div class="r-t">${r.t}</div><div class="r-d">${r.d}</div></div>`;
+          g.appendChild(d);
+        });
+      })();
+
+      // ============================================================
+      // PORTFOLIO
+      // ============================================================
+      (function () {
+        const g = document.getElementById("port-g");
+        if (!g) return;
+        PROJECTS.forEach((p, i) => {
+          const d = document.createElement("div");
+          d.className = "port-card rev scale";
+          d.style.transitionDelay = `${i * 0.1}s`;
+          const alt = (p.t || "")
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/"/g, "&quot;");
+          const imgTag = p.img
+            ? '<img class="port-thumb" src="' + p.img + '" alt="' + alt + '"/>'
+            : "";
+          d.innerHTML = `<div class="port-imgw">
+      <div class="port-vis" style="background:linear-gradient(135deg,${p.clr}28,${p.clr}10);">
+        ${imgTag}
+        <div style="text-align:center;position:relative;z-index:2;">
+          <div style="font-family:var(--font-h);font-size:4rem;font-weight:900;color:${p.clr};opacity:.35;">${p.letter}</div>
+          <div style="font-size:.75rem;color:var(--muted-fg);margin-top:.25rem;">${p.cat}</div>
+        </div>
+      </div>
+      <div class="port-ov"><div class="port-ov-inner"><div class="port-ov-ico">${si('<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>', 20)}</div><span class="port-ov-txt">View Project</span></div></div>
+    </div>
+    <div class="port-body"><div class="port-cat">${p.cat}</div><div class="port-title">${p.t}</div><div class="port-tags">${p.tech.map((x) => `<span class="port-tag">${x}</span>`).join("")}</div></div>`;
+          d.addEventListener("click", () => openModal(p));
+          g.appendChild(d);
+        });
+      })();
+
+      // ============================================================
+      // PROCESS
+      // ============================================================
+      (function () {
+        const g = document.getElementById("proc-g");
+        if (!g) return;
+        PROCESS.forEach((s, i) => {
+          const d = document.createElement("div");
+          d.className = "proc-card rev up";
+          d.style.transitionDelay = `${i * 0.15}s`;
+          d.innerHTML = `<div class="proc-imgw"><img src="${s.i}" alt="${s.t}"/></div><div class="proc-num">${i + 1}</div><h3>${s.t}</h3><p>${s.d}</p>`;
+          g.appendChild(d);
+        });
+      })();
+
+      // ============================================================
+      // TECH STACK
+      // ============================================================
+      (function () {
+        const g = document.getElementById("tech-g");
+        if (!g) return;
+        TECH.forEach((t, i) => {
+          const d = document.createElement("div");
+          d.className = "tech-card rev scale";
+          d.style.transitionDelay = `${i * 0.05}s`;
+          d.innerHTML = `<div class="tech-glow" style="box-shadow:0 0 30px ${t.c}40;"></div>
+      <div class="tech-letter" style="background:${t.c}20;color:${t.c};">${t.n.charAt(0)}</div>
+      <span class="tech-nm">${t.n}</span>`;
+          g.appendChild(d);
+        });
+      })();
+
+
+      // ============================================================
+      // FAQ
+      // ============================================================
+      (function () {
+        const list = document.getElementById("faq-l");
+        if (!list) return;
+        FAQS.forEach((f, i) => {
+          const item = document.createElement("div");
+          item.className = "faq-item rev up";
+          item.style.transitionDelay = `${i * 0.07}s`;
+          if (i === 0) item.classList.add("open");
+          item.innerHTML = `<button class="faq-q"><span>${f.q}</span><div class="faq-ic">+</div></button><div class="faq-ans"><div class="faq-ans-in">${f.a}</div></div>`;
+          item.querySelector(".faq-q").addEventListener("click", () => {
+            const was = item.classList.contains("open");
+            document
+              .querySelectorAll(".faq-item")
+              .forEach((x) => x.classList.remove("open"));
+            if (!was) item.classList.add("open");
+          });
+          list.appendChild(item);
+        });
+      })();
+
+      // ============================================================
+      // ABOUT PAGE
+      // ============================================================
+      (function () {
+        const g = document.getElementById("about-stats");
+        if (g)
+          ABOUT_STATS.forEach((s, i) => {
+            g.innerHTML += `<div class="stat-c rev up" style="transition-delay:${i * 0.1}s"><div class="stat-num tg">${s.n}</div><div class="stat-lbl">${s.l}</div></div>`;
+          });
+        const vg = document.getElementById("val-g");
+        if (vg)
+          VALUES.forEach((v, i) => {
+            const d = document.createElement("div");
+            d.className = "glow-card val-card rev scale";
+            d.style.transitionDelay = `${i * 0.1}s`;
+            d.innerHTML = `<div class="val-imgw"><img src="${v.i}" alt="${v.t}"/></div><h3>${v.t}</h3><p>${v.d}</p>`;
+            // use srv-card structure
+            d.style.cssText +=
+              ";position:relative;overflow:hidden;border-radius:1.25rem;border:1px solid var(--border);background:var(--card);padding:2rem;transition:all .4s;text-align:center;";
+            vg.appendChild(d);
+          });
+      })();
+
+      // ============================================================
+      // SERVICES PAGE
+      // ============================================================
+      (function () {
+        const g = document.getElementById("srv-page-g");
+        if (!g) return;
+        SERVICES_FULL.forEach((s, i) => {
+          const dir = i % 2 === 0 ? "left" : "right";
+          const d = document.createElement("div");
+          d.className = `srv-pg-card rev ${dir}`;
+          d.style.transitionDelay = `${i * 0.08}s`;
+          d.innerHTML = `<div class="srv-pg-ic">${s.ic}</div><div><h3>${s.t}</h3><p>${s.d}</p><div class="srv-tags">${s.f.map((x) => `<span class="srv-tag">${x}</span>`).join("")}</div></div>`;
+          d.addEventListener("mousemove", (e) => {
+            const r = d.getBoundingClientRect();
+            d.style.setProperty("--mx", `${e.clientX - r.left}px`);
+            d.style.setProperty("--my", `${e.clientY - r.top}px`);
+          });
+          g.appendChild(d);
+        });
+      })();
+
+      // ============================================================
+      // PACKAGES
+      // ============================================================
+      (function () {
+        const g = document.getElementById("pkg-g");
+        if (!g) return;
+        PACKAGES.forEach((p, i) => {
+          const d = document.createElement("div");
+          d.className = "pkg-card rev up" + (p.pop ? " pop" : "");
+          d.style.transitionDelay = `${i * 0.15}s`;
+          d.innerHTML = `${p.pop ? '<div class="pkg-badge">Most Popular</div>' : ""}
+      <div class="pk-name">${p.n}</div><div class="pk-desc">${p.d}</div>
+      <div class="pk-price">${p.p}<span>/project</span></div>
+      <div class="pk-feats">${p.f.map((f) => `<div class="pk-feat"><span class="pk-chk">${si('<polyline points="20 6 9 17 4 12"/>', 15)}</span>${f}</div>`).join("")}</div>
+      <a href="#" class="pk-cta ${p.pop ? "prim" : "sec"}" data-page="contact">Get Started</a>`;
+          g.appendChild(d);
+        });
+      })();
+
+      // ============================================================
+      // DESIGNS PAGE
+      // ============================================================
+      let desFilt = "All";
+      function renderDesigns() {
+        const g = document.getElementById("des-g");
+        if (!g) return;
+        const list =
+          desFilt === "All"
+            ? DESIGNS
+            : DESIGNS.filter((d) => d.cat === desFilt);
+        g.innerHTML = "";
+        list.forEach((d, i) => {
+          const card = document.createElement("div");
+          card.className = "des-card rev scale";
+          card.style.transitionDelay = `${i * 0.1}s`;
+          const alt = (d.t || "")
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/"/g, "&quot;");
+          const imgTag = d.img
+            ? '<img class="port-thumb" src="' + d.img + '" alt="' + alt + '"/>'
+            : "";
+          card.innerHTML = `<div class="port-imgw">
+      <div class="port-vis" style="background:linear-gradient(135deg,${d.clr}28,${d.clr}10);">
+        ${imgTag}
+        <div style="text-align:center;position:relative;z-index:2;"><div style="font-size:.75rem;color:var(--muted-fg);">${d.cat}</div></div>
+      </div>
+      <div class="port-ov"><div class="port-ov-inner"><div class="port-ov-ico">${si('<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/>', 20)}</div><span class="port-ov-txt">View Details</span></div></div>
+    </div>
+    <div class="port-body"><div class="port-title">${d.t}</div><div class="port-cat">${d.cat}</div></div>`;
+          card.addEventListener("click", () => openModal(d));
+          g.appendChild(card);
+        });
+        setTimeout(initReveal, 60);
+      }
+      (function () {
+        const row = document.getElementById("filt-row");
+        if (!row) return;
+        DES_CATS.forEach((c) => {
+          const btn = document.createElement("button");
+          btn.className = "filt-btn" + (c === "All" ? " active" : "");
+          btn.textContent = c;
+          btn.addEventListener("click", () => {
+            desFilt = c;
+            document
+              .querySelectorAll(".filt-btn")
+              .forEach((b) => b.classList.remove("active"));
+            btn.classList.add("active");
+            renderDesigns();
+          });
+          row.appendChild(btn);
+        });
+        renderDesigns();
+      })();
+
+      // ============================================================
+      // MODAL
+      // ============================================================
+      let modalGallery = [];
+      let modalSlide = 0;
+
+      function syncModalSlide(i) {
+        if (!modalGallery.length) return;
+        modalSlide = (i + modalGallery.length) % modalGallery.length;
+
+        const track = document.getElementById("m-track");
+        const ctrl = document.getElementById("modal-gallery-ctrl");
+        if (track) track.style.transform = `translateX(-${modalSlide * 100}%)`;
+        if (ctrl) {
+          ctrl.querySelectorAll(".mg-dot").forEach((dot, idx) =>
+            dot.classList.toggle("active", idx === modalSlide),
+          );
+        }
+      }
+
+      function stepModalSlide(delta) {
+        syncModalSlide(modalSlide + delta);
+      }
+
+      function openModal(d) {
+        document.getElementById("m-cat").textContent = d.cat || "";
+        document.getElementById("m-title").textContent = d.t || "";
+        document.getElementById("m-desc").textContent =
+          d.fullDesc || d.desc || "";
+
+        const gallery = d.gallery || [d.img];
+        modalGallery = gallery;
+        modalSlide = 0;
+
+        const area = document.getElementById("modal-img-area");
+        const ctrl = document.getElementById("modal-gallery-ctrl");
+
+        area.innerHTML = `${gallery.length > 1 ? '<button class="modal-nav modal-nav-prev" id="m-prev" aria-label="Previous slide">‹</button>' : ""}
+  <div class="modal-vis-track" id="m-track">
+    ${gallery
+      .map(
+        (img) => `
+      <div class="modal-vis">
+        <img class="modal-thumb" src="${img}" alt="${d.t}"/>
+      </div>
+    `,
+      )
+      .join("")}
+  </div>
+  ${gallery.length > 1 ? '<button class="modal-nav modal-nav-next" id="m-next" aria-label="Next slide">›</button>' : ""}
+  <div class="modal-overlay-grad"></div>`;
+
+        ctrl.innerHTML =
+          gallery.length > 1
+            ? gallery
+                .map(
+                  (_, i) => `
+    <button class="mg-dot ${i === 0 ? "active" : ""}" data-slide="${i}"></button>
+  `,
+                )
+                .join("")
+            : "";
+
+        ctrl.querySelectorAll(".mg-dot").forEach((dot) => {
+          dot.onclick = () => syncModalSlide(parseInt(dot.dataset.slide, 10));
+        });
+
+        const prev = document.getElementById("m-prev");
+        const next = document.getElementById("m-next");
+        if (prev) prev.onclick = () => stepModalSlide(-1);
+        if (next) next.onclick = () => stepModalSlide(1);
+
+        let touchStartX = 0;
+        let touchStartY = 0;
+        area.ontouchstart = (e) => {
+          const touch = e.touches[0];
+          touchStartX = touch.clientX;
+          touchStartY = touch.clientY;
+        };
+        area.ontouchend = (e) => {
+          if (!gallery.length || gallery.length < 2) return;
+          const touch = e.changedTouches[0];
+          const dx = touch.clientX - touchStartX;
+          const dy = touch.clientY - touchStartY;
+          if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy)) return;
+          stepModalSlide(dx < 0 ? 1 : -1);
+        };
+
+        syncModalSlide(0);
+
+        document.getElementById("modal-bg").classList.add("open");
+      }
+      document.getElementById("modal-bg").addEventListener("click", (e) => {
+        if (e.target === document.getElementById("modal-bg"))
+          document.getElementById("modal-bg").classList.remove("open");
+      });
+      document.getElementById("modal-close").addEventListener("click", () => {
+        document.getElementById("modal-bg").classList.remove("open");
+      });
+      document.addEventListener("keydown", (e) => {
+        const modal = document.getElementById("modal-bg");
+        if (!modal.classList.contains("open")) return;
+        if (e.key === "Escape") modal.classList.remove("open");
+        if (modalGallery.length < 2) return;
+        if (e.key === "ArrowLeft") stepModalSlide(-1);
+        if (e.key === "ArrowRight") stepModalSlide(1);
+      });
+
+      // ============================================================
+      // CONTACT FORM
+      // ============================================================
+      (function () {
+        const form = document.getElementById("contact-form");
+        if (form)
+          form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const btn = form.querySelector(".f-submit");
+            const btxt = btn.querySelector("span");
+            const oldText = btxt.textContent;
+            btxt.textContent = "Sending...";
+            btn.disabled = true;
+
+            const formData = new FormData(form);
+
+            fetch("contact_handler.php", {
+              method: "POST",
+              body: formData,
+            })
+              .then((res) => res.json())
+              .then((data) => {
+                if (data.status === "success") {
+                  showToast(data.message);
+                  form.reset();
+                } else {
+                  showToast(
+                    data.message || "Something went wrong. Please try again.",
+                  );
+                }
+              })
+              .catch((err) => {
+                showToast(
+                  "Error connecting to the server. Please try again later.",
+                );
+              })
+              .finally(() => {
+                btxt.textContent = oldText;
+                btn.disabled = false;
+              });
+          });
+      })();
+
+      function showToast(msg) {
+        const t = document.getElementById("toast");
+        t.textContent = msg;
+        t.classList.add("show");
+        setTimeout(() => t.classList.remove("show"), 4000);
+      }
+
+      // ============================================================
+      // LEGAL PAGES
+      // ============================================================
+      (function () {
+        const yr = new Date().getFullYear();
+        Object.keys(LEGAL).forEach((key) => {
+          const pg = document.getElementById("page-" + key);
+          if (!pg) return;
+          const ld = LEGAL[key];
+          pg.innerHTML = `
+    <div class="page-hero"><div class="container"><div class="rev up">
+      <button class="legal-back-btn" data-page="home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 5 5 12 12 19"/></svg>
+        Back to Home
+      </button>
+      <h1><span class="tg">${ld.title}</span></h1>
+    </div></div></div>
+    <div class="legal-page"><div class="container"><div class="legal-content">
+      <div class="legal-eff">${ld.eff}</div>
+      ${ld.sections.map((s) => `<h2>${s.h}</h2><p>${s.b}</p>`).join("")}
+    </div></div></div>
+    <div id="footer-${key}"></div>`;
+          setTimeout(() => {
+            document.getElementById("footer-" + key).innerHTML =
+              FOOTER_HTML(yr);
+          }, 0);
+        });
+
+        // Set all footers
+        const yr2 = new Date().getFullYear();
+        ["home", "about", "services", "designs", "packages", "contact"].forEach(
+          (k) => {
+            const el = document.getElementById("footer-" + k);
+            if (el) el.innerHTML = FOOTER_HTML(yr2);
+          },
+        );
+      })();
+
+      // ============================================================
+      // SCROLL REVEAL
+      // ============================================================
+      function initReveal() {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add("vis");
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.08, rootMargin: "0px 0px -40px 0px" },
+        );
+        document
+          .querySelectorAll(".rev:not(.vis)")
+          .forEach((el) => io.observe(el));
+      }
+      initReveal();
+      // Re-run periodically for dynamically injected content
+      setInterval(initReveal, 600);
+
+      // ============================================================
+      // GLOW CARD CURSOR
+      // ============================================================
+      document.addEventListener("mousemove", (e) => {
+        document.querySelectorAll(".srv-card,.srv-pg-card").forEach((d) => {
+          const r = d.getBoundingClientRect();
+          d.style.setProperty("--mx", `${e.clientX - r.left}px`);
+          d.style.setProperty("--my", `${e.clientY - r.top}px`);
+        });
+      });
+    </script>
+  </body>
+</html>
